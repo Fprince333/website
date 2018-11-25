@@ -1,9 +1,31 @@
 import React, { Component } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import { theme, GlobalStyle } from './theme/globalStyle';
 import VideoBackground from './components/videoBackground';
 import logo from './logo.svg';
-import './App.css';
 
 const wpEndpoint = "https://www.lwilsonsmith.com/wp-json/wp/v2/";
+
+const AppWrapper = styled.div`
+  text-align: center;
+`
+
+const AppLogo = styled.img`
+	position: relative;
+	height: 30vmin;
+	z-index: 1;
+`
+
+const AppHeader = styled.div`
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+`
 
 class App extends Component {
   constructor(props) {
@@ -32,12 +54,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <VideoBackground videoSrc={this.state.video} />
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-      </div>
+      <ThemeProvider theme={theme}>
+        <React.Fragment>
+          <GlobalStyle />
+          <AppWrapper>
+            <AppHeader>
+              <VideoBackground videoSrc={this.state.video} />
+              <AppLogo src={logo} alt="WS logo" />
+            </AppHeader>
+          </AppWrapper>
+        </React.Fragment>
+      </ThemeProvider>
     );
   }
 }
