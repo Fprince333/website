@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './theme/globalStyle';
-import VideoBackground from './components/videoBackground';
+import YoutubeBackground from 'react-youtube-background';
 import logo from './logo.svg';
-
-const wpEndpoint = "https://www.lwilsonsmith.com/wp-json/wp/v2/";
 
 const AppWrapper = styled.div`
   text-align: center;
@@ -31,40 +29,34 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      video: null
+      youtubeIds: [
+        'ktSdle1Mwdg',
+        'gnNsuErvvJM',
+        'D_3xCnDxxU8',
+        'ClASuxd8jQY',
+        'UK32KG5EcbA',
+        'GpNzlh5ALRA'
+      ]
     }
   }
 
-  setVideoForClipUrl = url => {
-    fetch(url)
-      .then(res => res.json())
-      .then(json => {
-        this.setState({ video: json[0].source_url })
-      })
-  }
-
-  componentDidMount() {
-    fetch(`${wpEndpoint}clip`)
-      .then(res => res.json())
-      .then(json => {
-        const clipIndex = Math.floor((Math.random() * json.length));
-        this.setVideoForClipUrl(json[clipIndex]._links["wp:attachment"][0].href)
-      })
-  }
-
   render() {
+    const youtubeId = this.state.youtubeIds[Math.floor(Math.random() * this.state.youtubeIds.length)];
     return (
-      <ThemeProvider theme={theme}>
-        <React.Fragment>
-          <GlobalStyle />
-          <AppWrapper>
-            <AppHeader>
-              <VideoBackground videoSrc={this.state.video} />
-              <AppLogo src={logo} alt="WS logo" />
-            </AppHeader>
-          </AppWrapper>
-        </React.Fragment>
-      </ThemeProvider>
+      <YoutubeBackground
+        videoId={youtubeId}
+        overlay="rgba(0,0,0,.5)">
+        <ThemeProvider theme={theme}>
+          <React.Fragment>
+            <GlobalStyle />
+            <AppWrapper>
+              <AppHeader>
+                <AppLogo src={logo} alt="WS logo" />
+              </AppHeader>
+            </AppWrapper>
+          </React.Fragment>
+        </ThemeProvider>
+      </YoutubeBackground>
     );
   }
 }
