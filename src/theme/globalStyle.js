@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.65;
+    background-image: linear-gradient(to top, #61dafb, #6dafd2, #6c86a2, #5d6271, #434343);
   }
 
   body .body.is-loading *,

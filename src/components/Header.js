@@ -114,9 +114,11 @@ const A = styled.a`
   height: 2.75rem;
   letter-spacing: .2rem;
   line-height: 2.75rem;
-  min-width: 7.5rem;
   padding: 0 1.25rem 0 1.45rem;
   text-transform: uppercase;
+  @media screen and (min-width: 480px) {
+    min-width: 7.5rem;
+  }
 `
 
 const Header = props => {

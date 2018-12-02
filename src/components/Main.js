@@ -159,7 +159,7 @@ const IconLink = styled.a`
     height: 60px;
     border-radius: 100%;
     display: block;
-    background: linear-gradient(45deg, #61dafb, #4B2E84);
+    background: linear-gradient(45deg, #61dafb, #434343);
     transition: all 265ms ease-out;
   };
   :hover:before {
@@ -234,6 +234,7 @@ class Main extends React.Component {
 
         <ContactArticle>
           <MajorH2>Contact</MajorH2>
+          <p>Let's make something together!</p>
           <SocialIconsContainer>
             <SocialIcon><IconLink href="https://www.linkedin.com/in/lwilsonsmith/"><Icon className="fa fa-linkedin" /></IconLink></SocialIcon>
             <SocialIcon><IconLink href="https://github.com/Fprince333"><Icon className="fa fa-github" /></IconLink></SocialIcon>

@@ -112,7 +112,7 @@ class App extends React.Component {
             />
             <Footer timeout={this.state.timeout} />
           </AppWrapper>
-          <VideoBackground/>
+          {window.innerWidth > 480 ? <VideoBackground/> : null}
         </div>
       </ThemeProvider>
     );
