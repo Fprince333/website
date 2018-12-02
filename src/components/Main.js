@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import intro from '../images/intro.jpg';
 import work from '../images/work.jpg';
+import about from '../images/about.jpg';
 import logo from '../logo.svg';
 
 const MainContent = styled.main`
@@ -84,6 +85,95 @@ const Close = styled.div`
   }
 `
 
+const WorkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const WorkList = styled.ol`
+  margin-left: 0;
+  list-style: none;
+  counter-reset: counter;
+`
+
+const WorkPlace = styled.li`
+  ::before {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 3px solid #61dafb;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #61dafb;
+    background-color: white;
+    border-radius: 100em;
+    counter-increment: counter;
+    content: counter(counter);
+  ::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 90;
+    left: 0.75rem;
+    margin-left: 1.5px;
+    border-left: 3px solid #61dafb;
+    content: "";
+  }
+  };
+`
+
+const SocialIconsContainer = styled.ul`
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+`
+
+const SocialIcon = styled.li`
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+`
+
+const Icon = styled.i`
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+`
+
+const IconLink = styled.a`
+  display: inline-block;
+  ::before {
+    transform: scale(1);
+    content: " ";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #61dafb, #4B2E84);
+    transition: all 265ms ease-out;
+  };
+  :hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+  };
+  :hover i {
+    transform: scale(2.2);
+    color: #61dafb;
+    background: none;
+    transition: all 265ms ease-in;
+  };
+`
+
 class Main extends React.Component {
   render() {
 
@@ -122,19 +212,21 @@ class Main extends React.Component {
         <WorkArticle>
           <MajorH2>Work</MajorH2>
           <ImageSpan><Image src={work} alt="" /></ImageSpan>
-          <ol>
-            <li>Architectural Systems (2017 - Present)</li>
-            <li>FanVision Entertainment (2016 - 2017)</li>
-            <li>Crossfield Digital (2015-2016)</li>
-            <li>PrePlay (2012-2015)</li>
-            <li>The Wall Street Journal (2010-2012)</li>
-          </ol>
+          <WorkContainer>
+            <WorkList>
+              <WorkPlace>Architectural Systems (2017)</WorkPlace>
+              <WorkPlace>FanVision Entertainment (2016)</WorkPlace>
+              <WorkPlace>Crossfield Digital (2015)</WorkPlace>
+              <WorkPlace>PrePlay (2012)</WorkPlace>
+              <WorkPlace>The Wall Street Journal (2010)</WorkPlace>
+            </WorkList>
+          </WorkContainer>
           <Close onClick={() => { this.props.onCloseArticle() }}/>
         </WorkArticle>
 
         <AboutArticle>
           <MajorH2>About</MajorH2>
-          <ImageSpan><Image src={logo} alt="" /></ImageSpan>
+          <ImageSpan><Image src={about} alt="" /></ImageSpan>
           <p>I specialize in designing and developing user interfaces and digital products. I don’t restrict myself to development. During my career, I have taught myself to code in both front and back-end languages. I know the possibilities and restrictions of user interfaces and I know how to operate in teams.</p>
           <p>The blend of design, marketing, development and business is where I feel I excel and can provide value for you. I am a strong individual with a love for side-projects which enhance people’s personal & professional goals.</p>
           <Close onClick={() => { this.props.onCloseArticle() }}/>
@@ -142,30 +234,12 @@ class Main extends React.Component {
 
         <ContactArticle>
           <MajorH2>Contact</MajorH2>
-          <form method="post" action="#">
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
-            </div>
-            <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
-            </ul>
-          </form>
-          <ul className="icons">
-            <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-            <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
-          </ul>
+          <SocialIconsContainer>
+            <SocialIcon><IconLink href="https://www.linkedin.com/in/lwilsonsmith/"><Icon className="fa fa-linkedin" /></IconLink></SocialIcon>
+            <SocialIcon><IconLink href="https://github.com/Fprince333"><Icon className="fa fa-github" /></IconLink></SocialIcon>
+            <SocialIcon><IconLink href="https://twitter.com/lwilsonsmith"><Icon className="fa fa-twitter"/></IconLink></SocialIcon>
+            <SocialIcon><IconLink href="https://www.instagram.com/lwilsonsmith/"><Icon className="fa fa-instagram"/></IconLink></SocialIcon>
+          </SocialIconsContainer>
           <Close onClick={() => { this.props.onCloseArticle() }}/>
         </ContactArticle>
 

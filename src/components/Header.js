@@ -129,7 +129,7 @@ const Header = props => {
         <Inner>
           <H1>Will Smith</H1>
           <H1>Web Developer</H1>
-          <P>Making things happen on the net since modems were invented</P>
+          <P>Making things happen on the net since modems made noise</P>
         </Inner>
       </Content>
       <Nav>

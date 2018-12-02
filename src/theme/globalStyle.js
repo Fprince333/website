@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600);
+  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
   *, :after, :before {
     box-sizing: border-box;
@@ -48,7 +49,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    border-bottom: 1px dotted hsla(0,0%,100%,.5);
     color: inherit;
     text-decoration: none;
     transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
