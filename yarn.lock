@@ -7877,14 +7877,7 @@ react-scripts@2.1.1:
   optionalDependencies:
     fsevents "1.2.4"
 
-react-youtube-background@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/react-youtube-background/-/react-youtube-background-0.1.4.tgz#54aba80cda21d41a7a0f956493a74363e5bf461e"
-  integrity sha1-VKuoDNoh1Bp6D5Vkk6dDY+W/Rh4=
-  dependencies:
-    react-youtube "^7.6.0"
-
-react-youtube@^7.6.0:
+react-youtube@^7.8.0:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/react-youtube/-/react-youtube-7.8.0.tgz#f782995cc5bad1c0378e3669359aa786acba2d31"
   integrity sha512-kQFR0XTpgGRtzJ54HKDaCtAGr34mgB/BVFeCAL0WUjpIKZBcWtFrKJhYkoKfvWK7aTzJuQ57xojTjG7V6JzILA==

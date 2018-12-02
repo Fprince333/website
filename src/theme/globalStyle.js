@@ -54,6 +54,16 @@ const GlobalStyle = createGlobalStyle`
     transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
   }
 
+  article {
+    background-color: rgba(27,31,34,.85);
+    border-radius: 4px;
+    padding: 4.5rem 2.5rem 1.5rem;
+    transition: opacity .325s ease-in-out, transform .325s ease-in-out;
+    width: 40rem;
+    max-width: 100%;
+    position: relative;
+  }
+
   ul {
     list-style: none;
     margin: 0 0 2rem;
@@ -62,6 +72,15 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0 0 2rem;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 `;
 

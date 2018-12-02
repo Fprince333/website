@@ -1,8 +1,9 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './theme/globalStyle';
-import YoutubeBackground from 'react-youtube-background';
+import VideoBackground from './components/VideoBackground';
 import Header from './components/Header';
+import Main from './components/Main';
 import Footer from './components/Footer';
 
 const AppWrapper = styled.div`
@@ -37,15 +38,19 @@ class App extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading',
-      youtubeIds: [
-        'ktSdle1Mwdg',
-        'gnNsuErvvJM',
-        'D_3xCnDxxU8',
-        'ClASuxd8jQY',
-        'UK32KG5EcbA',
-        'GpNzlh5ALRA'
-      ]
+      loading: 'is-loading'
+    }
+  }
+
+  componentDidMount() {
+    this.timeoutId = setTimeout(() => {
+      this.setState({ loading: '' });
+    }, 100);
+  }
+
+  componentWillUnmount() {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
     }
   }
 
@@ -91,21 +96,25 @@ class App extends React.Component {
   }
 
   render() {
-    const youtubeId = this.state.youtubeIds[Math.floor(Math.random() * this.state.youtubeIds.length)];
+
     return (
-      <YoutubeBackground
-        videoId={youtubeId}
-        overlay="rgba(0,0,0,.5)">
-        <ThemeProvider theme={theme}>
-          <div className="body">
-            <GlobalStyle />
-            <AppWrapper>
-              <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
-              <Footer timeout={this.state.timeout} />
-            </AppWrapper>
-          </div>
-        </ThemeProvider>
-      </YoutubeBackground>
+      <ThemeProvider theme={theme}>
+        <div className="body">
+          <GlobalStyle />
+          <AppWrapper>
+            <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+            <Main
+              isArticleVisible={this.state.isArticleVisible}
+              timeout={this.state.timeout}
+              articleTimeout={this.state.articleTimeout}
+              article={this.state.article}
+              onCloseArticle={this.handleCloseArticle}
+            />
+            <Footer timeout={this.state.timeout} />
+          </AppWrapper>
+          <VideoBackground/>
+        </div>
+      </ThemeProvider>
     );
   }
 }

@@ -97,7 +97,7 @@ const Ul = styled.ul`
   padding-left: 0;
 `
 
-const firstLi = styled.li`
+const FirstLi = styled.li`
   border-left: 0;
   padding-left: 0;
 `
@@ -129,12 +129,12 @@ const Header = props => {
         <Inner>
           <H1>Will Smith</H1>
           <H1>Web Developer</H1>
-          <P>Making things happen on the net since 2010</P>
+          <P>Making things happen on the net since modems were invented</P>
         </Inner>
       </Content>
       <Nav>
         <Ul>
-          <firstLi><A href="javascript:;" onClick={() => { props.onOpenArticle('intro') }}>Intro</A></firstLi>
+          <FirstLi><A href="javascript:;" onClick={() => { props.onOpenArticle('intro') }}>Intro</A></FirstLi>
           <Li><A href="javascript:;" onClick={() => { props.onOpenArticle('work') }}>Work</A></Li>
           <Li><A href="javascript:;" onClick={() => { props.onOpenArticle('about') }}>About</A></Li>
           <Li><A href="javascript:;" onClick={() => { props.onOpenArticle('contact') }}>Contact</A></Li>
