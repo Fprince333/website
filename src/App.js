@@ -1,9 +1,13 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './theme/globalStyle';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import VideoBackground from './components/VideoBackground';
-import Header from './components/Header';
-import Main from './components/Main';
+import Home from './components/Home';
+import Intro from './components/Intro';
+import Work from './components/Work';
+import About from './components/About';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 const AppWrapper = styled.div`
@@ -45,7 +49,7 @@ class App extends React.Component {
   componentDidMount() {
     this.timeoutId = setTimeout(() => {
       this.setState({ loading: '' });
-    }, 100);
+    }, 150);
   }
 
   componentWillUnmount() {
@@ -54,46 +58,6 @@ class App extends React.Component {
     }
   }
 
-  handleOpenArticle = article => {
-
-    this.setState({
-      isArticleVisible: !this.state.isArticleVisible, article
-    })
-
-    setTimeout(() => {
-      this.setState({
-        timeout: !this.state.timeout
-      })
-    }, 325)
-
-    setTimeout(() => {
-      this.setState({
-        articleTimeout: !this.state.articleTimeout
-      })
-    }, 350)
-
-  }
-
-  handleCloseArticle = () => {
-
-    this.setState({
-      articleTimeout: !this.state.articleTimeout
-    })
-
-    setTimeout(() => {
-      this.setState({
-        timeout: !this.state.timeout
-      })
-    }, 325)
-
-    setTimeout(() => {
-      this.setState({
-        isArticleVisible: !this.state.isArticleVisible,
-        article: ''
-      })
-    }, 350)
-
-  }
 
   render() {
 
@@ -102,15 +66,16 @@ class App extends React.Component {
         <div className="body">
           <GlobalStyle />
           <AppWrapper>
-            <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
-            <Main
-              isArticleVisible={this.state.isArticleVisible}
-              timeout={this.state.timeout}
-              articleTimeout={this.state.articleTimeout}
-              article={this.state.article}
-              onCloseArticle={this.handleCloseArticle}
-            />
-            <Footer timeout={this.state.timeout} />
+            <Router>
+              <React.Fragment>
+                <Route path="/" exact component={Home} />
+                <Route path="/intro" component={Intro} />
+                <Route path="/work" component={Work} />
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+              </React.Fragment>
+            </Router>
+            <Footer />
           </AppWrapper>
           {window.innerWidth > 480 ? <VideoBackground/> : null}
         </div>

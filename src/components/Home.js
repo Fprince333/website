@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 
 const HeaderTag = styled.header`
@@ -85,6 +86,9 @@ const Nav = styled.nav`
     position: absolute;
     top: calc(-3.5rem - 1px);
     width: 1px;
+    @media screen and (max-width: 480px) {
+      left: 182px;
+    }
   }
 `
 
@@ -107,7 +111,7 @@ const Li = styled.li`
   padding-left: 0;
 `
 
-const A = styled.a`
+const A = styled.div`
   border-bottom: 0;
   display: block;
   font-size: .8rem;
@@ -121,28 +125,42 @@ const A = styled.a`
   }
 `
 
+const MainContent = styled.main`
+  display: flex;
+  max-width: 100%;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
+  z-index: 3;
+`
+
 const Header = props => {
   return (
-    <HeaderTag style={props.timeout ? { display: 'none' } : {}}>
-      <LogoContainer>
-        <Logo src={logo} />
-      </LogoContainer>
-      <Content>
-        <Inner>
-          <H1>Will Smith</H1>
-          <H1>Web Developer</H1>
-          <P>Making things happen on the net since modems made noise</P>
-        </Inner>
-      </Content>
-      <Nav>
-        <Ul>
-          <FirstLi><A href="javascript:;" onClick={() => { props.onOpenArticle('intro') }}>Intro</A></FirstLi>
-          <Li><A href="javascript:;" onClick={() => { props.onOpenArticle('work') }}>Work</A></Li>
-          <Li><A href="javascript:;" onClick={() => { props.onOpenArticle('about') }}>About</A></Li>
-          <Li><A href="javascript:;" onClick={() => { props.onOpenArticle('contact') }}>Contact</A></Li>
-        </Ul>
-      </Nav>
-    </HeaderTag>
+    <MainContent>
+      <HeaderTag style={props.timeout ? { display: 'none' } : {}}>
+        <LogoContainer>
+          <A><Link to="/"><Logo src={logo} /></Link></A>
+        </LogoContainer>
+        <Content>
+          <Inner>
+            <H1>Will Smith</H1>
+            <H1>Web Developer</H1>
+            <P>Making things happen on the net since modems made noise</P>
+          </Inner>
+        </Content>
+        <Nav>
+          <Ul>
+            <FirstLi><A><Link to="/intro">Intro</Link></A></FirstLi>
+            <Li><A><Link to="/work">Work</Link></A></Li>
+            <Li><A><Link to="/about">About</Link></A></Li>
+            <Li><A><Link to="/contact">Contact</Link></A></Li>
+          </Ul>
+        </Nav>
+      </HeaderTag>
+    </MainContent>
    );
 }
 
