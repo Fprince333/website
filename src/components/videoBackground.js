@@ -42,41 +42,54 @@ const videoOptions = {
   }
 };
 
+let youtubeIds = [
+  'ktSdle1Mwdg',
+  'gnNsuErvvJM',
+  'D_3xCnDxxU8',
+  'ClASuxd8jQY',
+  'UK32KG5EcbA',
+]
+
 class VideoBackground extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isPlaying: false,
-      youtubeIds: [
-        'ktSdle1Mwdg',
-        'gnNsuErvvJM',
-        'D_3xCnDxxU8',
-        'ClASuxd8jQY',
-        'UK32KG5EcbA',
-      ]
+      playedVideoIds: [],
+      youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)],
+      isPlaying: false
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextState.isPlaying ? false : true;
+  replay = event => {
+    this.setState({ youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)] })
+    youtubeIds = youtubeIds.filter(id => {
+      return id !== this.state.youtubeId;
+    });
   }
 
-  replay = event => {
+  play = event => {
     event.target.playVideo()
   }
 
-  isPlayingCheck = event => {
-    if (event.target.getPlayerState() > 0) {
-      this.setState({isPlaying: true})
+  handlePlaying = event => {
+    if (!this.state.isPlaying) {
+      this.setState({ isPlaying: true })
+      const scrollId = window.location.pathname.split("/")[1];
+      if (scrollId.length) {
+        document.getElementById(scrollId).scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+      youtubeIds = youtubeIds.filter(id => {
+        return id !== this.state.youtubeId;
+      });
     }
   }
 
   render() {
-    const youtubeId = this.state.youtubeIds[Math.floor(Math.random() * this.state.youtubeIds.length)]
+    const youtubeId = this.state.youtubeId;
     return (
       <VideoBg>
         <VideoFg>
-          <YouTube videoId={youtubeId} opts={videoOptions} onEnd={this.replay} onStateChange={this.isPlayingCheck} />
+          <YouTube videoId={youtubeId} opts={videoOptions} onEnd={this.replay} onReady={this.play} onPlay={this.handlePlaying} />
         </VideoFg>
       </VideoBg>
      );

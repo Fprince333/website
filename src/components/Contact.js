@@ -1,128 +1,138 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { TiSocialLinkedin, TiSocialTwitter, TiSocialGithub, TiMail } from 'react-icons/ti';
 
-const MainContent = styled.main`
-  display: flex;
-  max-width: 100%;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
-  justify-content: center;
-  z-index: 3;
+const Background = styled.div`
+  background: #434242;
 `
 
-const MajorH2 = styled.h2`
-  border-bottom: 1px solid #fff;
-  margin: 0 0 2rem;
-  padding-bottom: .5rem;
-  width: max-content;
-  font-size: 1.5rem;
+const Container = styled.div`
+  max-width: 1280px;
+  padding: 40px 180px;
+  margin: 0 auto;
+  @media (max-width: 767px) {
+    padding: 60px 20px;
+    min-width: 280px;
+  }
+`
+
+const H2 = styled.h2`
+  font-size: 55px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+`
+
+const Title = styled.p`
+  color: #727878;
+  text-align: center;
+  font-size: 21px;
+  margin-bottom: 20px;
+  font-weight: 300;
   line-height: 1.4;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .5rem;
 `
 
-const SocialIconsContainer = styled.ul`
-  display: flex;
-  justify-content: center;
+const Border = styled.hr`
+  margin: 40px 0px;
+  border-color: #727878;
+  opacity: 0.2;
+  border-top: 1px solid #eee;
+`
+
+const Row = styled.div`
+  margin-right: -15px;
+  margin-left: -15px;
+  @media (min-width: 992px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+const Column = styled.div`
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+`
+
+const UL = styled.ul`
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  list-style: none;
-  margin: 1em;
 `
 
-const SocialIcon = styled.li`
-  display: inline-block;
-  margin: 0.15em;
-  position: relative;
-  font-size: 1.2em;
-`
-
-const Icon = styled.i`
-  color: #fff;
-  position: absolute;
-  top: 21px;
-  left: 21px;
-  transition: all 265ms ease-out;
-`
-
-const IconLink = styled.a`
-  display: inline-block;
-  ::before {
-    transform: scale(1);
-    content: " ";
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    display: block;
-    background: linear-gradient(45deg, #61dafb, #434343);
-    transition: all 265ms ease-out;
-  };
-  :hover:before {
-    transform: scale(0);
-    transition: all 265ms ease-in;
-  };
-  :hover i {
-    transform: scale(2.2);
-    color: #61dafb;
-    background: none;
-    transition: all 265ms ease-in;
-  };
-`
-
-const Close = styled.div`
-  cursor: pointer;
-  display: block;
-  height: 4rem;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  text-indent: 4rem;
-  top: 0;
-  white-space: nowrap;
-  width: 4rem;
-  ::before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    border-radius: 100%;
-    content: "";
-    display: block;
-    height: 2.5rem;
-    left: .75rem;
-    position: absolute;
-    top: .75rem;
-    transition: background-color .2s ease-in-out;
-    width: 2.5rem;
+const Li = styled.li`
+  svg {
+    float: left;
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+  }
+  a {
+    line-height: 32px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      opacity: 1;
+    }
   }
 `
 
-const Article = styled.article`
-  opacity: 1;
-  transform: translateY(0);
-`
+const Contact = () => {
+  return (
+    <Background>
+      <Container>
+        <H2>Contact</H2>
+        <Title>"Never half-ass two things. Whole-ass one thing." <br /> - Ron Swanson</Title>
+        <Border />
+        <Row>
+          <Column>
+            <UL>
+              <Li>
+                <a href="https://www.linkedin.com/in/lwilsonsmith" target="_blank" rel="noopener noreferrer">
+                  <TiSocialLinkedin />
+                  https://www.linkedin.com/in/lwilsonsmith
+                </a>
+              </Li>
+              <Li>
+                <a href="https://twitter.com/lwilsonsmith" target="_blank" rel="noopener noreferrer">
+                  <TiSocialTwitter />
+                  https://twitter.com/lwilsonsmith
+                </a>
+              </Li>
+            </UL>
+          </Column>
+          <Column>
+            <UL>
+              <Li>
+                <a href="https://github.com/Fprince333" target="_blank" rel="noopener noreferrer">
+                  <TiSocialGithub />
+                  https://github.com/Fprince333
+                </a>
+              </Li>
+              <Li>
+                <a href="mailto:lwilsonsmith@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <TiMail />
+                  lwilsonsmith@gmail.com
+                </a>
+              </Li>
+            </UL>
+          </Column>
+        </Row>
+        <Border />
+        <Row>
 
-class Contact extends React.Component {
-  state = {}
-  render() {
-    return (<Article>
-      <MainContent>
-        <MajorH2>Contact</MajorH2>
-        <p>Let's make something together!</p>
-        <SocialIconsContainer>
-          <SocialIcon><IconLink href="https://www.linkedin.com/in/lwilsonsmith/"><Icon className="fa fa-linkedin" /></IconLink></SocialIcon>
-          <SocialIcon><IconLink href="https://github.com/Fprince333"><Icon className="fa fa-github" /></IconLink></SocialIcon>
-          <SocialIcon><IconLink href="https://twitter.com/lwilsonsmith"><Icon className="fa fa-twitter" /></IconLink></SocialIcon>
-          <SocialIcon><IconLink href="https://www.instagram.com/lwilsonsmith/"><Icon className="fa fa-instagram" /></IconLink></SocialIcon>
-        </SocialIconsContainer>
-        <Link to="/"><Close /></Link>
-      </MainContent>
-    </Article>);
-  }
+        </Row>
+      </Container>
+    </Background>
+  );
 }
 
 export default Contact;
