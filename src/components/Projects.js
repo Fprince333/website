@@ -94,6 +94,17 @@ const Figcaption = styled.figcaption`
     p {
       opacity: 1;
       transform: translate3d(0,0,0);
+      margin: 0;
+    }
+    @media (max-width: 767px) {
+      h3 {
+        font-size: 17px;
+        padding-bottom: 5px;
+      }
+      p {
+        font-size: 14px;
+        padding-top: 0px;
+      }
     }
   }
   h3 {
@@ -101,7 +112,7 @@ const Figcaption = styled.figcaption`
     overflow: hidden;
     padding-bottom: 20px;
     color: #fff;
-    font-weight: 600px;
+    font-weight: 600;
     margin-bottom: 5px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
@@ -121,7 +132,7 @@ const Figcaption = styled.figcaption`
     padding-top: 10px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
-    transform: translate3d()(100%,0,0);
+    transform: translate3d(100%,0,0);
     strong {
       width: 60px;
       display: inline-block;
@@ -158,7 +169,8 @@ const Figcaption = styled.figcaption`
 `
 
 const Poster = styled.img`
-  width: 110%;
+  display: flex;
+  width: 104%;
   transform: translate3d(-10px,0,0);
   transition: opacity 0.35s, transform 0.35s;
   backface-visibility: hidden;
