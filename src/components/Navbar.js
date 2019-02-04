@@ -62,18 +62,50 @@ const DesktopUl = styled.ul`
   list-style: none;
 `
 
-const DesktopLi = styled.li`
-  height: 80px;
-  color: ${props => (props.selected ? 'white' : 'inherit')};
-  background: ${props => (props.selected ? '#0984e3' : 'inherit')};
-`
-
 const LinkContainer = styled.div`
   height: 80px;
   text-align: center;
   padding-top: 30px;
   font-weight: 600;
   color: white;
+`
+
+class Li extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
+
+  componentDidUpdate() {
+    if (window.scrollY < window.innerHeight) {
+      window.history.replaceState({}, `Home`, `/`)
+    } else {
+      if (this.props.selected) {
+        window.history.replaceState({}, this.props.section, `/${this.props.section}`)
+      }
+    }
+  }
+
+  componentDidMount() {
+    const sections = Array.from(document.getElementsByClassName('section'));
+    sections.forEach(section => {
+      section.addEventListener('click', e => {
+        const title = e.currentTarget.textContent;
+        window.history.replaceState({}, title, `/${title.toLowerCase()}`)
+      })
+    })
+  }
+
+  render() {
+    return (<li className={this.props.className} onClick={this.props.onClick} selected={this.props.isSelected}>{this.props.children}</li> );
+  }
+}
+
+const DesktopLi = styled(Li)`
+  height: 80px;
+  color: ${props => (props.selected ? 'white' : 'inherit')};
+  background: ${props => (props.selected ? '#0984e3' : 'inherit')};
+  cursor: pointer;
 `
 
 class Navbar extends React.Component {
@@ -104,27 +136,27 @@ class Navbar extends React.Component {
         <DesktopNav open={this.state.showMobileNav}>
           <DesktopUl onClick={() => this.closeMobileMenu()}>
             <SectionLink section="profile">
-              {({ onClick, isSelected }) => <DesktopLi onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi className='section' section='profile' onClick={onClick} selected={isSelected}>
                   <LinkContainer>Profile</LinkContainer>
                 </DesktopLi>}
             </SectionLink>
             <SectionLink section="experience">
-              {({ onClick, isSelected }) => <DesktopLi onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi className='section' section='experience' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Experience</LinkContainer>
               </DesktopLi>}
             </SectionLink>
             <SectionLink section="abilities">
-              {({ onClick, isSelected }) => <DesktopLi onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi className='section' section='abilities' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Abilities</LinkContainer>
               </DesktopLi>}
             </SectionLink>
             <SectionLink section="projects">
-              {({ onClick, isSelected }) => <DesktopLi onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi className='section' section='projects' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Projects</LinkContainer>
               </DesktopLi>}
             </SectionLink>
             <SectionLink section="contact">
-              {({ onClick, isSelected }) => <DesktopLi onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi className='section' section='contact' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Contact</LinkContainer>
               </DesktopLi>}
             </SectionLink>

@@ -12,7 +12,25 @@ import Abilities from './Abilities';
 import Projects from './Projects';
 import Contact from './Contact';
 
-const LinkContainer = styled.div`
+class Link extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {  }
+  }
+
+  componentDidMount() {
+    const section = document.getElementsByClassName('home')[0]
+    section.addEventListener('click', e => {
+      window.history.replaceState({}, `Profile`, `/profile`)
+    })
+  }
+
+  render() {
+    return (<li className={this.props.className} onClick={this.props.onClick} selected={this.props.isSelected}>{this.props.children}</li> );
+  }
+}
+
+const LinkContainer = styled(Link)`
   height: 80px;
   width: 110px;
   display: block;
@@ -22,6 +40,7 @@ const LinkContainer = styled.div`
   background-color: #222222;
   text-align: center;
   z-index: 6;
+  cursor: pointer;
   svg {
     display: flex;
     margin: 0 auto;
@@ -41,7 +60,7 @@ const Video = () => {
     <ScrollingProvider scrollBehavior="smooth">
       <Top />
       <SectionLink section="profile">
-        {({ onClick, isSelected }) => <LinkContainer onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
+        {({ onClick, isSelected }) => <LinkContainer className='home' onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
       </SectionLink>
       <VideoBackground />
       <Navbar />
@@ -70,7 +89,7 @@ const Image = () => {
       <ImageBackground>
         <Top />
         <SectionLink section="profile">
-          {({ onClick, isSelected }) => <LinkContainer onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
+          {({ onClick, isSelected }) => <LinkContainer className='home' onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
         </SectionLink>
       </ImageBackground>
       <Navbar />
