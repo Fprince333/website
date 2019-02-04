@@ -77,8 +77,11 @@ class Li extends React.Component {
   }
 
   componentDidUpdate() {
-    if (window.scrollY < window.innerHeight) {
+    const path = window.location.pathname.split("/")[1];
+    if (window.scrollY < window.innerHeight && !path.length) {
       window.history.replaceState({}, `Home`, `/`)
+    } else if (window.scrollY < window.innerHeight && path[1].length) {
+      window.history.replaceState({}, path, `/${path}`)
     } else {
       if (this.props.selected) {
         window.history.replaceState({}, this.props.section, `/${this.props.section}`)

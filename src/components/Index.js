@@ -142,6 +142,14 @@ class Index extends React.Component {
     }
   }
 
+  handleScroll() {
+    setTimeout(() => {
+      if (window.scrollY < window.innerHeight) {
+        window.history.replaceState({}, `Home`, `/`)
+      }
+    }, 2000);
+  }
+
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return nextState.layout !== this.state.layout;
   }
@@ -149,10 +157,12 @@ class Index extends React.Component {
   componentDidMount() {
     this.handleSize();
     window.addEventListener('resize', () => this.handleSize())
+    window.addEventListener('scroll', () => this.handleScroll())
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', () => this.handleSize())
+    window.removeEventListener('scroll', () => this.handleScroll())
   }
 
   render() {
