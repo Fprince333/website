@@ -130,11 +130,14 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      layout: 'mobile'
+      layout: 'mobile',
+      isTop: true
     }
   }
 
   handleSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
     if (window.innerWidth > 768) {
       this.setState({ layout: 'desktop' });
     } else {
@@ -143,18 +146,26 @@ class Index extends React.Component {
   }
 
   handleScroll() {
-    setTimeout(() => {
-      if (window.scrollY < window.innerHeight) {
-        window.history.replaceState({}, `Home`, `/`)
-      }
-    }, 2000);
+    if (window.scrollY < window.innerHeight) {
+      this.setState({ isTop: true });
+    } else {
+      this.setState({ isTop: false });
+    }
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextState.layout !== this.state.layout;
+    return nextState.layout !== this.state.layout || nextState.isTop !== this.state.isTop;
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (this.state.isTop) {
+      window.history.replaceState({}, `Home`, `/`)
+    }
   }
 
   componentDidMount() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
     this.handleSize();
     window.addEventListener('resize', () => this.handleSize())
     window.addEventListener('scroll', () => this.handleScroll())
