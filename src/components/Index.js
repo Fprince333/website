@@ -162,8 +162,6 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
     this.handleSize();
     window.addEventListener('resize', () => this.handleSize())
     window.addEventListener('scroll', () => this.handleScroll())
