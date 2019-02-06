@@ -6,7 +6,6 @@ const Jumbotron = styled.div`
   background: no-repeat center center fixed url(${heat});
   background-size: 100% auto;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
 `
 

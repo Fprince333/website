@@ -136,8 +136,6 @@ class Index extends React.Component {
   }
 
   handleSize() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
     if (window.innerWidth > 768) {
       this.setState({ layout: 'desktop' });
     } else {
