@@ -6,7 +6,7 @@ const Jumbotron = styled.div`
   background-image: url(${heat});
   background-size: 100% auto;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 `
 

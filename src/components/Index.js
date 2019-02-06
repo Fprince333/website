@@ -26,7 +26,7 @@ class Link extends React.Component {
   }
 
   render() {
-    return (<li className={this.props.className} onClick={this.props.onClick} selected={this.props.isSelected}>{this.props.children}</li> );
+    return (<div className={this.props.className} onClick={this.props.onClick} selected={this.props.isSelected}>{this.props.children}</div> );
   }
 }
 
@@ -50,6 +50,7 @@ const LinkContainer = styled(Link)`
     height: 100%;
   }
   @media (max-width: 767px) {
+    position: sticky;
     width: 100%;
     right: 0;
   }
@@ -60,7 +61,7 @@ const Video = () => {
     <ScrollingProvider scrollBehavior="smooth">
       <Top />
       <SectionLink section="profile">
-        {({ onClick, isSelected }) => <LinkContainer className='home' onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
+        {({ onClick, isSelected }) => <LinkContainer className="home" onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
       </SectionLink>
       <VideoBackground />
       <Navbar />
@@ -89,7 +90,7 @@ const Image = () => {
       <ImageBackground>
         <Top />
         <SectionLink section="profile">
-          {({ onClick, isSelected }) => <LinkContainer className='home' onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
+          {({ onClick, isSelected }) => <LinkContainer className="home" onClick={onClick} selected={isSelected}><MdExpandMore /></LinkContainer>}
         </SectionLink>
       </ImageBackground>
       <Navbar />

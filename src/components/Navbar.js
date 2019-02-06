@@ -10,7 +10,6 @@ const Nav = styled.nav`
   top: 20px;
   width: 110px;
   z-index: 9999;
-  margin-bottom: -400px;
   float: right;
   margin-right: 5%;
   @media (min-width: 768px) {
