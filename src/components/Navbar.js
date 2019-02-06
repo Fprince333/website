@@ -76,6 +76,10 @@ class Li extends React.Component {
     this.state = {}
   }
 
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+     return nextProps.selected !== this.props.selected;
+  }
+
   componentDidUpdate() {
     const path = window.location.pathname.split("/")[1];
     if (window.scrollY < window.innerHeight && !path.length) {
