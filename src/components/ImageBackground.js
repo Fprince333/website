@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import heat from '../images/heat.jpg';
 
 const Jumbotron = styled.div`
-  background: no-repeat center center fixed url(${heat});
+  background-image: url(${heat});
   background-size: 100% auto;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
 `
