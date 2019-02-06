@@ -94,16 +94,6 @@ class Li extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const sections = Array.from(document.getElementsByClassName('section'));
-    sections.forEach(section => {
-      section.addEventListener('click', e => {
-        const title = e.currentTarget.textContent;
-        window.history.replaceState({}, title, `/${title.toLowerCase()}`)
-      })
-    })
-  }
-
   render() {
     return (<li className={this.props.className} onClick={this.props.onClick} selected={this.props.isSelected}>{this.props.children}</li> );
   }
@@ -144,27 +134,27 @@ class Navbar extends React.Component {
         <DesktopNav open={this.state.showMobileNav}>
           <DesktopUl onClick={() => this.closeMobileMenu()}>
             <SectionLink section="profile">
-              {({ onClick, isSelected }) => <DesktopLi className='section' section='profile' onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi section='profile' onClick={onClick} selected={isSelected}>
                   <LinkContainer>Profile</LinkContainer>
                 </DesktopLi>}
             </SectionLink>
             <SectionLink section="experience">
-              {({ onClick, isSelected }) => <DesktopLi className='section' section='experience' onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi section='experience' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Experience</LinkContainer>
               </DesktopLi>}
             </SectionLink>
             <SectionLink section="abilities">
-              {({ onClick, isSelected }) => <DesktopLi className='section' section='abilities' onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi section='abilities' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Abilities</LinkContainer>
               </DesktopLi>}
             </SectionLink>
             <SectionLink section="projects">
-              {({ onClick, isSelected }) => <DesktopLi className='section' section='projects' onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi section='projects' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Projects</LinkContainer>
               </DesktopLi>}
             </SectionLink>
             <SectionLink section="contact">
-              {({ onClick, isSelected }) => <DesktopLi className='section' section='contact' onClick={onClick} selected={isSelected}>
+              {({ onClick, isSelected }) => <DesktopLi section='contact' onClick={onClick} selected={isSelected}>
                 <LinkContainer>Contact</LinkContainer>
               </DesktopLi>}
             </SectionLink>
