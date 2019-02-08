@@ -2,7 +2,12 @@ import React from 'react';
 import { GlobalStyle } from './theme/globalStyle';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ReactGA from 'react-ga';
-import Index from './components/Index';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Experience from './pages/Experience';
+import Abilities from './pages/Abilities';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 ReactGA.initialize('UA-58068154-1');
 ReactGA.pageview("/");
@@ -20,12 +25,12 @@ class App extends React.Component {
       <Router>
         <React.Fragment>
           <GlobalStyle />
-          <Route path="/" exact component={Index} />
-          <Route path="/profile" component={Index} />
-          <Route path="/experience" component={Index} />
-          <Route path="/abilities" component={Index} />
-          <Route path="/projects" component={Index} />
-          <Route path="/contact" component={Index} />
+          <Route path="/" exact component={Home} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/abilities" component={Abilities} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/contact" component={Contact} />
         </React.Fragment>
       </Router>
     );

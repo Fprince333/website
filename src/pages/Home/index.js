@@ -1,16 +1,17 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import styled from 'styled-components';
 import { ScrollingProvider, Section, SectionLink } from "react-scroll-section";
 import { MdExpandMore } from "react-icons/md";
-import VideoBackground from './VideoBackground';
-import ImageBackground from './ImageBackground';
-import Navbar from './Navbar';
-import Top from './Top';
-import Profile from './Profile';
-import Experience from './Experience';
-import Abilities from './Abilities';
-import Projects from './Projects';
-import Contact from './Contact';
+import VideoBackground from 'components/VideoBackground';
+import ImageBackground from 'components/ImageBackground';
+import Navbar from 'components/Navbar';
+import Top from 'components/Top';
+import Profile from 'components/Profile';
+import Experience from 'components/Experience';
+import Abilities from 'components/Abilities';
+import Projects from 'components/Projects';
+import Contact from 'components/Contact';
 
 class Link extends React.Component {
   constructor(props) {
@@ -115,6 +116,10 @@ const Image = () => {
 
 const Desktop = () => {
   return (<React.Fragment>
+    <Helmet>
+      <title>Will Smith</title>
+      <meta name="description" content="Interactive Resume" />
+    </Helmet>
     <Video />
   </React.Fragment>
   )
@@ -122,12 +127,16 @@ const Desktop = () => {
 
 const Mobile = () => {
   return (<React.Fragment>
+    <Helmet>
+      <title>Will Smith</title>
+      <meta name="description" content="Interactive Resume" />
+    </Helmet>
     <Image />
   </React.Fragment>
   )
 }
 
-class Index extends React.Component {
+class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -178,4 +187,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default HomePage;
