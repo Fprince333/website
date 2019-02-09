@@ -75,6 +75,12 @@ const UL = styled.ul`
 const Li = styled.li`
   min-height: 30px;
   padding: 3px 0px;
+  &:hover {
+    background: #F2F2F2;
+    svg {
+      margin-left: 2px;
+    }
+  }
 `
 
 const AbilityTitle = styled.span`
@@ -85,6 +91,9 @@ const AbilityTitle = styled.span`
 const AbilityScore = styled.span`
   color: #0984e3;
   float: right;
+  svg {
+    transition: all 0.3s;
+  }
 `
 
 const Abilities = () => {
