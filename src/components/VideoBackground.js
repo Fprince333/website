@@ -42,7 +42,7 @@ const videoOptions = {
   }
 };
 
-let youtubeIds = [
+const youtubeIds = [
   'ktSdle1Mwdg',
   'gnNsuErvvJM',
   'D_3xCnDxxU8',
@@ -54,17 +54,28 @@ class VideoBackground extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      playedVideoIds: [],
+      youtubeIds: youtubeIds,
       youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)],
       isPlaying: false
     }
   }
 
   replay = event => {
-    this.setState({ youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)] })
-    youtubeIds = youtubeIds.filter(id => {
+    const updatedYoutubeIds = this.state.youtubeIds.filter(id => {
       return id !== this.state.youtubeId;
     });
+    if (updatedYoutubeIds.length) {
+      this.setState({
+        youtubeId: updatedYoutubeIds[Math.floor(Math.random() * updatedYoutubeIds.length)],
+        youtubeIds: updatedYoutubeIds
+      })
+    } else {
+      this.setState({
+        youtubeIds: youtubeIds,
+        youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)]
+      });
+    }
+    event.target.playVideo()
   }
 
   play = event => {
@@ -73,14 +84,17 @@ class VideoBackground extends React.Component {
 
   handlePlaying = event => {
     if (!this.state.isPlaying) {
-      this.setState({ isPlaying: true })
       const scrollId = window.location.pathname.split("/")[1];
       if (scrollId.length) {
         document.getElementById(scrollId).scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
-      youtubeIds = youtubeIds.filter(id => {
+      const updatedYoutubeIds = this.state.youtubeIds.filter(id => {
         return id !== this.state.youtubeId;
       });
+      this.setState({
+        isPlaying: true,
+        youtubeIds: updatedYoutubeIds
+      })
     }
   }
 
