@@ -19,4 +19,4 @@ Personal site built using Create React App + Netlify
 - `npm || yarn test`
 - `npm || yarn deploy`
 - `npm run || yarn build`
-- `npm run || yarn eject``
+- `npm run || yarn eject`
