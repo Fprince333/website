@@ -5,10 +5,12 @@ import Video from 'components/Video';
 import Image from 'components/Image';
 
 const Desktop = props => {
+  const linkPath = props.title === "Will Smith" ? "" : props.title.split(" | ")[1].toLowerCase();
   return (<React.Fragment>
     <Helmet>
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
+      <link rel="canonical" href={`https://www.lwilsonsmith.com/${linkPath}`} />
     </Helmet>
     <Video />
   </React.Fragment>
@@ -16,10 +18,12 @@ const Desktop = props => {
 }
 
 const Mobile = props => {
+  const linkPath = props.title === "Will Smith" ? "" : props.title.split(" | ")[1].toLowerCase();
   return (<React.Fragment>
-    <Helmet>
+    <Helmet >
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
+      <link rel="canonical" href={`https://www.lwilsonsmith.com/${linkPath}`} />
     </Helmet>
     <Image />
   </React.Fragment>
