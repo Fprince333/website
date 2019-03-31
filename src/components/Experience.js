@@ -95,6 +95,10 @@ const Location = styled.span`
   display: block;
   color: #0984e3;
   margin-top: 5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
 `
 
 const Separator = styled.span`
@@ -196,6 +200,11 @@ const Experience = () => {
               <span>Completed a part time course introducing the basics of how websites are constructed. Later that year, spent three months in the immersive course training to become a full stack developer with intermediate to advanced knowledge of HTML, CSS, JavaScript, Ruby and Ruby on Rails.</span>
               <Location>
                 <MdLocationOn /> New York, NY
+                <Separator>|</Separator>
+                <Link>
+                  <MdLink />
+                  <a href="https://generalassemb.ly/" target="_blank" rel="noopener noreferrer">https://generalassemb.ly/</a>
+                </Link>
               </Location>
             </p>
           </ColumnRight>
@@ -211,6 +220,11 @@ const Experience = () => {
               <span>Graduated with a liberal arts degree from the college's most renowned department where I honed my critical and creative approach to the study of literature. </span>
               <Location>
                 <MdLocationOn /> Gambier, OH
+                <Separator>|</Separator>
+                <Link>
+                  <MdLink />
+                  <a href="https://www.kenyon.edu" target="_blank" rel="noopener noreferrer">https://www.kenyon.edu</a>
+                </Link>
               </Location>
             </p>
           </ColumnRight>
@@ -226,6 +240,11 @@ const Experience = () => {
               <span>Graduated as a "Survivor" at the oldest independent school in the United States. </span>
               <Location>
                 <MdLocationOn /> New York, NY
+                <Separator>|</Separator>
+                <Link>
+                  <MdLink />
+                  <a href="https://www.collegiateschool.org" target="_blank" rel="noopener noreferrer">https://www.collegiateschool.org</a>
+                </Link>
               </Location>
             </p>
           </ColumnRight>
