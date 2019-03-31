@@ -215,6 +215,21 @@ const Experience = () => {
             </p>
           </ColumnRight>
         </Row>
+        <Row>
+          <ColumnLeft>
+            <H4>The Collegiate School</H4>
+            <p>1993 - 2004</p>
+          </ColumnLeft>
+          <ColumnRight>
+            <p>
+              <Course>Diploma</Course>
+              <span>Graduated as a "Survivor" at the oldest independent school in the United States. </span>
+              <Location>
+                <MdLocationOn /> New York, NY
+              </Location>
+            </p>
+          </ColumnRight>
+        </Row>
       </Container>
     </Background>
     );
