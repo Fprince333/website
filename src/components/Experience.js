@@ -124,8 +124,28 @@ const Experience = () => {
         <H3>Work</H3>
         <Row>
           <ColumnLeft>
+            <H4>Weber Shandwick</H4>
+            <p>2019 - Present</p>
+          </ColumnLeft>
+          <ColumnRight>
+            <p>
+              <Course>Senior Technical Producer</Course>
+              <span>Developed the USOC Olympians Made Here website. Managed Mars Inc. during the overhaul of the global and local websites. Updated the Weber Shandwick website with new messaging, design and creative.</span>
+              <Location>
+                <MdLocationOn /> New York, NY
+                <Separator>|</Separator>
+                <Link>
+                  <MdLink/>
+                  <a href="https://www.webershandwick.com/" target="_blank" rel="noopener noreferrer">https://www.webershandwick.com/</a>
+                </Link>
+              </Location>
+            </p>
+          </ColumnRight>
+        </Row>
+        <Row>
+          <ColumnLeft>
             <H4>ASI | Architectural Systems, Inc.</H4>
-            <p>2017 - Present</p>
+            <p>2017 - 2019</p>
           </ColumnLeft>
           <ColumnRight>
             <p>
