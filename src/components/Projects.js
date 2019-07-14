@@ -195,7 +195,7 @@ const Projects = () => {
                   <br/>
                   Wordpress, React.js, Salesforce, Technical Project Management
                 </p>
-                <a href="https://asi.netlify.com" target="_blank" rel="noopener noreferrer">View more</a>
+                <a href="https://archsystems.com/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
                   <MdOpenInNew />
                 </span>
