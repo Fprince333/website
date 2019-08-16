@@ -205,7 +205,6 @@ const Projects = () => {
             </Figure>
           </Column>
           <Column>
-            <Column>
               <Figure>
                 <Poster src={usoc} />
                 <Figcaption>
@@ -223,7 +222,6 @@ const Projects = () => {
                 </Figcaption>
               </Figure>
             </Column>
-            <Column>
           <Column>
             <Figure>
               <Poster src={asi} />
