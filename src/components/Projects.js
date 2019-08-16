@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MdOpenInNew } from 'react-icons/md';
+import ws from '../images/ws.jpg';
+import usoc from '../images/usoc.jpg';
 import asi from '../images/asi.jpg';
 import icons from '../images/icons.jpg';
 import isbi from '../images/isbi.jpg';
@@ -186,6 +188,44 @@ const Projects = () => {
         <Row>
           <Column>
             <Figure>
+              <Poster src={ws} />
+              <Figcaption>
+                <h3>Weber Shandwick</h3>
+                <p>Corporate Website Rebrand</p>
+                <p>
+                  <strong>Tags: </strong>
+                  <br />
+                  Wordpress, Custom CMS Development, Technical Project Management
+                </p>
+                <a href="https://www.webershandwick.com/" target="_blank" rel="noopener noreferrer">View more</a>
+                <span className="icon">
+                  <MdOpenInNew />
+                </span>
+              </Figcaption>
+            </Figure>
+          </Column>
+          <Column>
+            <Column>
+              <Figure>
+                <Poster src={usoc} />
+                <Figcaption>
+                  <h3>USOC: Olympians Made Here</h3>
+                  <p>Team USA Olympians Made Here Campaign</p>
+                  <p>
+                    <strong>Tags: </strong>
+                    <br />
+                    Sitecore, Custom CMS Development, Technical Project Management
+                </p>
+                  <a href="https://archsystems.com/" target="_blank" rel="noopener noreferrer">View more</a>
+                  <span className="icon">
+                    <MdOpenInNew />
+                  </span>
+                </Figcaption>
+              </Figure>
+            </Column>
+            <Column>
+          <Column>
+            <Figure>
               <Poster src={asi} />
               <Figcaption>
                 <h3>Architectural Systems, Inc.</h3>
@@ -211,7 +251,7 @@ const Projects = () => {
                 <p>
                   <strong>Tags: </strong>
                   <br />
-                  Wordpress, React.js, Development
+                  Wordpress, Custom CMS Development, Techincal Project Management
                 </p>
                 <a href="https://iconsclub.archsystems.com" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
