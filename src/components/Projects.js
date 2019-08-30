@@ -4,7 +4,7 @@ import { MdOpenInNew } from 'react-icons/md';
 import ws from '../images/ws.jpg';
 import usoc from '../images/usoc.jpg';
 import asi from '../images/asi.jpg';
-import icons from '../images/icons.jpg';
+import dad from '../images/dad.jpg';
 import isbi from '../images/isbi.jpg';
 import levine from '../images/levine.jpg';
 
@@ -242,16 +242,16 @@ const Projects = () => {
           </Column>
           <Column>
             <Figure>
-              <Poster src={icons} />
+              <Poster src={dad} />
               <Figcaption>
-                <h3>ASI Icons Club</h3>
-                <p>ASI VIP website</p>
+                <h3>Randall Smith</h3>
+                <p>Freelance Journalist Professional Website</p>
                 <p>
                   <strong>Tags: </strong>
                   <br />
-                  Wordpress, Custom CMS Development, Techincal Project Management
+                  Squarespace, Custom Theme Development
                 </p>
-                <a href="https://iconsclub.archsystems.com" target="_blank" rel="noopener noreferrer">View more</a>
+                <a href="https://lrandallsmith.com" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
                   <MdOpenInNew />
                 </span>
