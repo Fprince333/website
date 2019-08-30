@@ -285,7 +285,7 @@ const Projects = () => {
                 <p>
                   <strong>Tags: </strong>
                   <br />
-                  Wordpress, Development
+                  React, Development
                 </p>
                 <a href="https://www.levineratio.com/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
