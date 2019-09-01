@@ -70,11 +70,13 @@ class VideoBackground extends React.Component {
         youtubeIds: updatedYoutubeIds
       })
     } else {
+      const resetYouTubeIds = youtubeIds.filter(id => {
+        return id !== this.state.youtubeId;
+      })
       this.setState({
-        youtubeIds: youtubeIds,
-        youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)]
+        youtubeIds: resetYouTubeIds,
+        youtubeId: resetYouTubeIds[Math.floor(Math.random() * resetYouTubeIds.length)]
       });
-      event.target.playVideo()
     }
   }
 
@@ -96,7 +98,7 @@ class VideoBackground extends React.Component {
     return (
       <VideoBg>
         <VideoFg>
-          <YouTube videoId={this.state.youtubeId} opts={videoOptions} onEnd={this.replay} onReady={this.play} onPlay={this.handlePlaying} />
+          <YouTube videoId={this.state.youtubeId} opts={videoOptions} onEnd={this.replay} onReady={this.play} onPlay={this.handlePlaying}/>
         </VideoFg>
       </VideoBg>
      );
