@@ -74,6 +74,7 @@ class VideoBackground extends React.Component {
         youtubeIds: youtubeIds,
         youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)]
       });
+      event.target.playVideo()
     }
   }
 
@@ -92,11 +93,10 @@ class VideoBackground extends React.Component {
   }
 
   render() {
-    const youtubeId = this.state.youtubeId;
     return (
       <VideoBg>
         <VideoFg>
-          <YouTube videoId={youtubeId} opts={videoOptions} onEnd={this.replay} onReady={this.play} onPlay={this.handlePlaying} />
+          <YouTube videoId={this.state.youtubeId} opts={videoOptions} onEnd={this.replay} onReady={this.play} onPlay={this.handlePlaying} />
         </VideoFg>
       </VideoBg>
      );
