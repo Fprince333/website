@@ -36,6 +36,8 @@ const videoOptions = {
   playerVars: { // https://developers.google.com/youtube/player_parameters
     autoplay: 1,
     mute: 1,
+    cc_load_policy: 1,
+    cc_lang_pref: 'en',
     controls: 0,
     rel: 0,
     showinfo: 0
@@ -47,7 +49,9 @@ const youtubeIds = [
   'gnNsuErvvJM',
   'D_3xCnDxxU8',
   'ClASuxd8jQY',
-  'UK32KG5EcbA'
+  'UK32KG5EcbA',
+  'KjqDhz9o9yw',
+  'LdwMb7ipV_I'
 ]
 
 class VideoBackground extends React.Component {
