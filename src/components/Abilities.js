@@ -118,16 +118,6 @@ const Abilities = () => {
                 </AbilityScore>
               </Li>
               <Li>
-                <AbilityTitle>HTML Email Templates</AbilityTitle>
-                <AbilityScore>
-                  <MdStar />
-                  <MdStar />
-                  <MdStar />
-                  <MdStar />
-                  <MdStarHalf />
-                </AbilityScore>
-              </Li>
-              <Li>
                 <AbilityTitle>CSS</AbilityTitle>
                 <AbilityScore>
                   <MdStar />
@@ -157,6 +147,16 @@ const Abilities = () => {
                   <MdStarBorder />
                 </AbilityScore>
               </Li>
+                            <Li>
+                <AbilityTitle>Webflow</AbilityTitle>
+                <AbilityScore>
+                  <MdStar />
+                  <MdStar />
+                  <MdStar />
+                  <MdStar />
+                  <MdStarBorder />
+                </AbilityScore>
+              </Li>
             </UL>
           </Column>
           <Column>
@@ -171,6 +171,17 @@ const Abilities = () => {
                   <MdStarBorder />
                 </AbilityScore>
               </Li>
+                                          <Li>
+                <AbilityTitle>Squarespace</AbilityTitle>
+                <AbilityScore>
+                  <MdStar />
+                  <MdStar />
+                  <MdStar />
+                  <MdStar />
+
+                  <MdStarBorder />
+                </AbilityScore>
+              </Li>
               <Li>
                 <AbilityTitle>AWS</AbilityTitle>
                 <AbilityScore>
@@ -178,16 +189,6 @@ const Abilities = () => {
                   <MdStar />
                   <MdStar />
                   <MdStarHalf />
-                  <MdStarBorder />
-                </AbilityScore>
-              </Li>
-              <Li>
-                <AbilityTitle>Node.js</AbilityTitle>
-                <AbilityScore>
-                  <MdStar />
-                  <MdStar />
-                  <MdStar />
-                  <MdStarBorder />
                   <MdStarBorder />
                 </AbilityScore>
               </Li>
@@ -202,7 +203,7 @@ const Abilities = () => {
                 </AbilityScore>
               </Li>
               <Li>
-                <AbilityTitle>Angular.js</AbilityTitle>
+                <AbilityTitle>Drupal</AbilityTitle>
                 <AbilityScore>
                   <MdStar />
                   <MdStar />
@@ -314,7 +315,7 @@ const Abilities = () => {
                 </AbilityScore>
               </Li>
               <Li>
-                <AbilityTitle>Invision</AbilityTitle>
+                <AbilityTitle>Invision | Sketch | Framer X</AbilityTitle>
                 <AbilityScore>
                   <MdStar />
                   <MdStar />
