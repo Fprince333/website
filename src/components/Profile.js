@@ -98,7 +98,7 @@ const Profile = () => {
               <strong>Name:</strong><br />
                 Will Smith<br />
               <strong>Age:</strong><br />
-                33<br />
+                34<br />
               <strong>Location:</strong><br />
                 New York, NY
             </p>
