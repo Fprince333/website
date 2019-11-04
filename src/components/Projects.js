@@ -226,24 +226,6 @@ const Projects = () => {
             </Column>
           <Column>
             <Figure>
-              <Poster src={asi} />
-              <Figcaption>
-                <h3>Architectural Systems, Inc.</h3>
-                <p>ASI e-commerce website rebuild/redesign.</p>
-                <p>
-                  <strong>Tags: </strong>
-                  <br/>
-                  Wordpress, React.js, Salesforce, Technical Project Management
-                </p>
-                <a href="https://archsystems.com/" target="_blank" rel="noopener noreferrer">View more</a>
-                <span className="icon">
-                  <MdOpenInNew />
-                </span>
-              </Figcaption>
-            </Figure>
-          </Column>
-          <Column>
-            <Figure>
               <Poster src={ws} />
               <Figcaption>
                 <h3>Weber Shandwick</h3>
