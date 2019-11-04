@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MdOpenInNew } from 'react-icons/md';
+import marsV1 from '../images/mars-v1.jpg';
+import marsV2 from '../images/mars-v2.jpg';
 import ws from '../images/ws.jpg';
 import usoc from '../images/usoc.jpg';
 import asi from '../images/asi.jpg';
@@ -186,6 +188,60 @@ const Projects = () => {
         <Title>"My job is to pull things together from different parts of the company and clear the ways and get the resources for the key projects. And to take these great people we have and to push them and make them even better, coming up with more aggressive visions of how it could be." <br /> - Steve Jobs</Title>
         <Border />
         <Row>
+        <Column>
+            <Figure>
+              <Poster src={marsV2} />
+              <Figcaption>
+                <h3>Mars.com Homepage v2</h3>
+                <p>Corporate Website Rebrand</p>
+                <p>
+                  <strong>Tags: </strong>
+                  <br />
+                  Rapid Prototyping, Custom Animations, Webflow
+                </p>
+                <a href="https://mars-master-prototype.webflow.io/" target="_blank" rel="noopener noreferrer">View more</a>
+                <span className="icon">
+                  <MdOpenInNew />
+                </span>
+              </Figcaption>
+            </Figure>
+          </Column>
+          <Column>
+              <Figure>
+                <Poster src={marsV1} />
+                <Figcaption>
+                  <h3>Mars.com</h3>
+                  <p>Corporate Website Development & Maintenance</p>
+                  <p>
+                    <strong>Tags: </strong>
+                    <br />
+                    Drupal, Acquia, Technical Project Management, Fortune 500 Company
+                </p>
+                <a href="https://www.mars.com/" target="_blank" rel="noopener noreferrer">View more</a>
+                  <span className="icon">
+                    <MdOpenInNew />
+                  </span>
+                </Figcaption>
+              </Figure>
+            </Column>
+          <Column>
+            <Figure>
+              <Poster src={asi} />
+              <Figcaption>
+                <h3>Architectural Systems, Inc.</h3>
+                <p>ASI e-commerce website rebuild/redesign.</p>
+                <p>
+                  <strong>Tags: </strong>
+                  <br/>
+                  Wordpress, React.js, Salesforce, Technical Project Management
+                </p>
+                <a href="https://archsystems.com/" target="_blank" rel="noopener noreferrer">View more</a>
+                <span className="icon">
+                  <MdOpenInNew />
+                </span>
+              </Figcaption>
+            </Figure>
+          </Column>
           <Column>
             <Figure>
               <Poster src={ws} />
