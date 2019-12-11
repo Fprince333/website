@@ -251,7 +251,7 @@ const Projects = () => {
                   <p>
                     <strong>Technologies: </strong>
                     <br />
-                    Sitecore, Custom CMS Development, Technical Project Management
+                    Sitecore
                 </p>
                 <a href="https://www.teamusa.org/OlympiansMadeHere" target="_blank" rel="noopener noreferrer">View more</a>
                   <span className="icon">
