@@ -37,7 +37,7 @@ const P = styled.p`
 const Top = () => {
   return (<Container>
     <H1>Will Smith</H1>
-    <P>Web Developer & Technical Producer of Digital Products</P>
+    <P>Web Developer & Creative Technologist</P>
   </Container>);
 }
 
