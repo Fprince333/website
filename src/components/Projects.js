@@ -195,9 +195,9 @@ const Projects = () => {
                 <h3>Mars.com Homepage v2</h3>
                 <p>Corporate Website Rebrand</p>
                 <p>
-                  <strong>Tags: </strong>
+                  <strong>Technologies: </strong>
                   <br />
-                  Rapid Prototyping, Custom Animations, Webflow
+                  CSS Animations, Webflow
                 </p>
                 <a href="https://mars-master-prototype.webflow.io/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
@@ -213,9 +213,9 @@ const Projects = () => {
                   <h3>Mars.com</h3>
                   <p>Corporate Website Development & Maintenance</p>
                   <p>
-                    <strong>Tags: </strong>
+                    <strong>Technologies: </strong>
                     <br />
-                    Drupal, Acquia, Technical Project Management, Fortune 500 Company
+                    Drupal, Acquia
                 </p>
                 <a href="https://www.mars.com/" target="_blank" rel="noopener noreferrer">View more</a>
                   <span className="icon">
@@ -231,9 +231,9 @@ const Projects = () => {
                 <h3>Weber Shandwick</h3>
                 <p>Corporate Website Rebrand</p>
                 <p>
-                  <strong>Tags: </strong>
+                  <strong>Technologies: </strong>
                   <br />
-                  Wordpress, Custom CMS Development, Technical Project Management
+                  Wordpress
                 </p>
                 <a href="https://www.webershandwick.com/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
@@ -249,7 +249,7 @@ const Projects = () => {
                   <h3>USOC: Olympians Made Here</h3>
                   <p>Team USA Olympians Made Here Campaign</p>
                   <p>
-                    <strong>Tags: </strong>
+                    <strong>Technologies: </strong>
                     <br />
                     Sitecore, Custom CMS Development, Technical Project Management
                 </p>
@@ -267,9 +267,9 @@ const Projects = () => {
                 <h3>Architectural Systems, Inc.</h3>
                 <p>ASI e-commerce website rebuild/redesign.</p>
                 <p>
-                  <strong>Tags: </strong>
+                  <strong>Technologies: </strong>
                   <br/>
-                  Wordpress, React.js, Salesforce, Technical Project Management
+                  Wordpress, React.js, Salesforce
                 </p>
                 <a href="https://archsystems.com/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
@@ -285,9 +285,9 @@ const Projects = () => {
                 <h3>Randall Smith</h3>
                 <p>Freelance Journalist Professional Website</p>
                 <p>
-                  <strong>Tags: </strong>
+                  <strong>Technologies: </strong>
                   <br />
-                  Squarespace, Custom Theme Development
+                  Squarespace
                 </p>
                 <a href="https://lrandallsmith.com" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
@@ -303,9 +303,9 @@ const Projects = () => {
                 <h3>Illinois State Board of Investment</h3>
                 <p>Government Website Design & Development</p>
                 <p>
-                  <strong>Tags: </strong>
+                  <strong>Technologies: </strong>
                   <br />
-                  Wordpress, Development
+                  Wordpress
                 </p>
                 <a href="https://www.isbinvestment.com/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
@@ -321,9 +321,9 @@ const Projects = () => {
                 <h3>Marc Levine on Investing</h3>
                 <p>Personal Website for Public Figure</p>
                 <p>
-                  <strong>Tags: </strong>
+                  <strong>Technologies: </strong>
                   <br />
-                  React, Development
+                  React.js
                 </p>
                 <a href="https://www.levineratio.com/" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
