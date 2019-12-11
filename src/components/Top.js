@@ -14,6 +14,7 @@ const Container = styled.div`
 `
 
 const H1 = styled.h1`
+  color: #0984e3;
   padding-bottom: 20px;
   border-bottom: 1px solid #FFFFFF;
   border-bottom-color: rgba(255,255,255,0.35);
