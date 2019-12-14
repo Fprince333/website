@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MdOpenInNew } from 'react-icons/md';
-import marsV1 from '../images/mars-v1.jpg';
+import netflixRepeatOne from '../images/nro.jpg';
 import marsV2 from '../images/mars-v2.jpg';
 import ws from '../images/ws.jpg';
 import usoc from '../images/usoc.jpg';
@@ -208,16 +208,16 @@ const Projects = () => {
           </Column>
           <Column>
               <Figure>
-                <Poster src={marsV1} />
+                <Poster src={netflixRepeatOne} />
                 <Figcaption>
-                  <h3>Mars.com</h3>
-                  <p>Corporate Website Development & Maintenance</p>
+                  <h3>Netflix Repeat One</h3>
+                  <p>Chrome Extension</p>
                   <p>
                     <strong>Technologies: </strong>
                     <br />
-                    Drupal, Acquia
+                    React.js, Chrome Extension
                 </p>
-                <a href="https://www.mars.com/" target="_blank" rel="noopener noreferrer">View more</a>
+                <a href="https://chrome.google.com/webstore/detail/netflix-repeat-one/nakdfnainfphcljekajcdbpdefmccccp" target="_blank" rel="noopener noreferrer">View more</a>
                   <span className="icon">
                     <MdOpenInNew />
                   </span>
