@@ -26,6 +26,7 @@ class App extends React.Component {
         <React.Fragment>
           <GlobalStyle />
           <Route path="/" exact component={Home} />
+          <Route path="/index.html" component={Home} />
           <Route path="/profile" component={Profile} />
           <Route path="/experience" component={Experience} />
           <Route path="/abilities" component={Abilities} />

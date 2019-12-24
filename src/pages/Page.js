@@ -43,6 +43,9 @@ class Page extends React.Component {
     if (isBrowser && window.innerWidth > 768) {
       this.setState({ layout: 'desktop' });
     } else {
+      if (window.location.pathname.split("/")[1] === "index.html") {
+        window.history.replaceState({}, `Home`, `/`)
+      }
       this.setState({ layout: 'mobile' });
     }
   }
