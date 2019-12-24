@@ -13,7 +13,7 @@ const Meta = {
   },
   home: {
     title: `Will Smith`,
-    description: `Web Developer & Technical Producer of Digital Products`
+    description: `Web Developer & Creative Technologist`
   },
   profile: {
     title: `WS | Profile`,
