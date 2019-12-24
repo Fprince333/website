@@ -11,6 +11,10 @@ const Container = styled.div`
   color: white;
   padding: 2rem;
   text-align: center;
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 0;
+  }
 `
 
 const H1 = styled.h1`

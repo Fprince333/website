@@ -1,19 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
-import heat from '../images/heat.jpg';
+import styled, { css } from 'styled-components';
+import ReactImageAppear from 'react-image-appear';
+import heatImg from '../images/heat.jpg';
+import heatGif from '../images/heat.gif';
 
-const Jumbotron = styled.div`
-  background-image: url(${heat});
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  height: 100%;
+const JumbotronContainer = styled.div`
+  ${props => props.addCSS}
+`
+
+const jumbotronCss = css`
+  height: 90vh;
   width: 100vw;
+  img {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
 `
 
 const ImageBackground = props => {
-  return ( <Jumbotron>
-    {props.children}
-  </Jumbotron>);
+  return ( <JumbotronContainer addCSS={jumbotronCss}>
+    <ReactImageAppear
+      src={heatGif}
+      placeholder={heatImg}
+      showLoader={false}
+    />{props.children}
+  </JumbotronContainer>);
 }
 
 export default ImageBackground;

@@ -20,7 +20,7 @@ const Nav = styled.nav`
     margin-right: 0px;
     top: 0;
     width: 100%;
-    min-height: 80px;
+    min-height: 10vh;
   }
 `
 
