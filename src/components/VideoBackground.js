@@ -92,11 +92,7 @@ class VideoBackground extends React.Component {
     if (!this.state.isPlaying) {
       const scrollId = window.location.pathname.split("/")[1];
       if (scrollId.length) {
-        if (scrollId === "index.html") {
-          window.history.replaceState({}, `Home`, `/`)
-        } else {
-          document.getElementById(scrollId).scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
+        document.getElementById(scrollId).scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
       this.setState({ isPlaying: true })
     }
