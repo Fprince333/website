@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { MdLocationOn, MdLink } from 'react-icons/md';
 
 const Background = styled.div`
-  background: #F3EFE0;
+  background: #dfe6e9;
 `
 
 const Container = styled.div`

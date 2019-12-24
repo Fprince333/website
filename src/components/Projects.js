@@ -11,7 +11,7 @@ import isbi from '../images/isbi.jpg';
 import levine from '../images/levine.jpg';
 
 const Background = styled.div`
-  background: #F3EFE0;
+  background: #dfe6e9;
 `
 
 const Container = styled.div`

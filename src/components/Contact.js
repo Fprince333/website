@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { TiSocialLinkedin, TiSocialTwitter, TiSocialGithub, TiMail } from 'react-icons/ti';
 
 const Background = styled.div`
-  background: #434242;
+  background: #2d3436;
 `
 
 const Container = styled.div`
