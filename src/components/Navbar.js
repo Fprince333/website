@@ -20,6 +20,7 @@ const Nav = styled.nav`
     margin-right: 0px;
     top: 0;
     width: 100%;
+    min-height: 80px;
   }
 `
 
@@ -32,8 +33,8 @@ const MobileNav = styled.div`
 
 const MobileNavToggle = styled.button`
   padding: 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: transparent;
   background-image: none;
   border-radius: 4px;
@@ -129,7 +130,7 @@ class Navbar extends React.Component {
       <Nav role="navigation">
         <MobileNav>
           <MobileNavToggle onClick={() => this.toggleMenu()}>
-            <MdViewHeadline />
+            <MdViewHeadline style={{minWidth: "20px", minHeight: "20px"}} />
           </MobileNavToggle>
         </MobileNav>
 
