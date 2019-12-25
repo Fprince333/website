@@ -12,8 +12,8 @@ const jumbotronCss = css`
   height: 90vh;
   width: 100vw;
   img {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: block;
   }
 `
