@@ -9,7 +9,7 @@ const JumbotronContainer = styled.div`
 `
 
 const jumbotronCss = css`
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   img {
     height: 100vh;
