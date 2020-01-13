@@ -20,7 +20,7 @@ const Desktop = props => {
       <meta name="description" content={props.description} />
       <meta property="og:url" content={`https://www.lwilsonsmith.com/${linkPath}`} />
       <link rel="canonical" href={`https://www.lwilsonsmith.com/${linkPath}`} />
-      {linkPath === 'home' && <meta property="og:image" content={`${homeImg}`} /> }
+      {linkPath === '' && <meta property="og:image" content={`${homeImg}`} /> }
       {linkPath === 'profile' && <meta property="og:image" content={`${profileImg}`} /> }
       {linkPath === 'experience' && <meta property="og:image" content={`${experienceImg}`} /> }
       {linkPath === 'abilities' && <meta property="og:image" content={`${abilitiesImg}`} /> }
