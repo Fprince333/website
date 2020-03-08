@@ -193,13 +193,13 @@ const Projects = () => {
               <Poster src={marsV2} />
               <Figcaption>
                 <h3>Mars.com Homepage v2</h3>
-                <p>Corporate Website Rebrand</p>
+                <p>Corporate Website Homepage Refresh</p>
                 <p>
                   <strong>Technologies: </strong>
                   <br />
-                  CSS Animations, Webflow
+                  CSS Animations, Drupal 
                 </p>
-                <a href="https://mars-master-prototype.webflow.io/" target="_blank" rel="noopener noreferrer">View more</a>
+                <a href="https://mars.com" target="_blank" rel="noopener noreferrer">View more</a>
                 <span className="icon">
                   <MdOpenInNew />
                 </span>
