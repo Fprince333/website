@@ -90,7 +90,7 @@ const Contact = () => {
     <Background>
       <Container>
         <H2>Contact</H2>
-        <Title>"Never half-ass two things. Whole-ass one thing." <br /> - Ron Swanson</Title>
+        <Title>"I don't care about what anything was DESIGNED to do, I care about what it CAN do." <br /> - Gene Kranz</Title>
         <Border />
         <Row>
           <Column>
