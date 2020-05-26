@@ -305,7 +305,7 @@ const Abilities = () => {
                 </AbilityScore>
               </Li>
               <Li>
-                <AbilityTitle>Pardot | MailChimp</AbilityTitle>
+                <AbilityTitle>Pardot | MailChimp | ConvertKit | Constant Contact</AbilityTitle>
                 <AbilityScore>
                   <MdStar />
                   <MdStar />
@@ -315,7 +315,7 @@ const Abilities = () => {
                 </AbilityScore>
               </Li>
               <Li>
-                <AbilityTitle>Invision | Sketch | Framer X</AbilityTitle>
+                <AbilityTitle>Invision | Sketch | Miro | Webflow</AbilityTitle>
                 <AbilityScore>
                   <MdStar />
                   <MdStar />
