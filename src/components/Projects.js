@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MdOpenInNew } from 'react-icons/md';
-import netflixRepeatOne from '../images/nro.jpg';
+import solveforx from '../images/solveforx.jpg';
 import marsV2 from '../images/mars-v2.jpg';
 import ws from '../images/ws.jpg';
 import usoc from '../images/usoc.jpg';
@@ -208,16 +208,16 @@ const Projects = () => {
           </Column>
           <Column>
               <Figure>
-                <Poster src={netflixRepeatOne} />
+                <Poster src={solveforx} />
                 <Figcaption>
-                  <h3>Netflix Repeat One</h3>
-                  <p>Chrome Extension</p>
+                  <h3>Media Genius - Master Class | Fellows Edition</h3>
+                  <p>Solve for X</p>
                   <p>
                     <strong>Technologies: </strong>
                     <br />
-                    React.js, Chrome Extension
+                    Marko.js, Static Site Generator, Typeform
                 </p>
-                <a href="https://chrome.google.com/webstore/detail/netflix-repeat-one/nakdfnainfphcljekajcdbpdefmccccp" target="_blank" rel="noopener noreferrer">View more</a>
+                <a href="https://solveforx.webershandwick.com/masterclass" target="_blank" rel="noopener noreferrer">View more</a>
                   <span className="icon">
                     <MdOpenInNew />
                   </span>
