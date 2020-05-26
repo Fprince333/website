@@ -192,7 +192,7 @@ const Projects = () => {
             <Figure>
               <Poster src={marsV2} />
               <Figcaption>
-                <h3>Mars.com Homepage v2</h3>
+                <h3>New Mars.com Homepage</h3>
                 <p>Corporate Website Homepage Refresh</p>
                 <p>
                   <strong>Technologies: </strong>
