@@ -4,7 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"react": "^16.13.1",
-		"react-device-detect": "^1.12.1",
+		"react-device-detect": "^1.13.1",
 		"react-dom": "^16.13.1",
 		"react-ga": "^2.7.0",
 		"react-helmet": "^6.0.0",
