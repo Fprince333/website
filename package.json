@@ -13,7 +13,7 @@
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "3.4.1",
 		"react-scroll-section": "^2.0.0",
-		"react-youtube": "^7.9.0",
+		"react-youtube": "^7.11.3",
 		"styled-components": "^4.4.1"
 	},
 	"scripts": {
