@@ -39,10 +39,12 @@ const P = styled.p`
 `
 
 const Top = () => {
-  return (<Container>
-    <H1>Will Smith</H1>
-    <P>Web Developer & Creative Technologist</P>
-  </Container>);
+  return (
+    <Container>
+      <H1>Will Smith</H1>
+      <P>Web Developer & Creative Technologist</P>
+    </Container>
+  );
 }
 
 export default Top;

@@ -19,7 +19,7 @@ const VideoBg = styled.div`
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0,0,0,.75);
+    background: ${props => (props.isPlaying ? 'rgba(0,0,0,.75)' : 'rgba(0,0,0,1)')};
   }
 `
 
@@ -44,44 +44,12 @@ const videoOptions = {
   }
 };
 
-const youtubeIds = [
-  'ktSdle1Mwdg',
-  'gnNsuErvvJM',
-  'D_3xCnDxxU8',
-  'ONmgaO09OxM',
-  'ClASuxd8jQY',
-  'UK32KG5EcbA',
-  'KjqDhz9o9yw',
-  'LdwMb7ipV_I'
-]
-
 class VideoBackground extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      youtubeIds: youtubeIds,
-      youtubeId: youtubeIds[Math.floor(Math.random() * youtubeIds.length)],
+      youtubeId: props.ytId,
       isPlaying: false
-    }
-  }
-
-  replay = event => {
-    const updatedYoutubeIds = this.state.youtubeIds.filter(id => {
-      return id !== this.state.youtubeId;
-    });
-    if (updatedYoutubeIds.length) {
-      this.setState({
-        youtubeId: updatedYoutubeIds[Math.floor(Math.random() * updatedYoutubeIds.length)],
-        youtubeIds: updatedYoutubeIds
-      })
-    } else {
-      const resetYouTubeIds = youtubeIds.filter(id => {
-        return id !== this.state.youtubeId;
-      })
-      this.setState({
-        youtubeIds: resetYouTubeIds,
-        youtubeId: resetYouTubeIds[Math.floor(Math.random() * resetYouTubeIds.length)]
-      });
     }
   }
 
@@ -95,15 +63,23 @@ class VideoBackground extends React.Component {
       if (scrollId.length) {
         document.getElementById(scrollId).scrollIntoView({ behavior: 'smooth', block: 'start' })
       }
-      this.setState({ isPlaying: true })
     }
+    this.setState({ isPlaying: true })
+  }
+
+  getNext = () => {
+    this.setState({ isPlaying: false })
+    this.props.getNextVideo()
+    this.setState({
+      youtubeId: this.props.ytId
+    })
   }
 
   render() {
     return (
-      <VideoBg>
+      <VideoBg isPlaying={this.state.isPlaying}>
         <VideoFg>
-          <YouTube videoId={this.state.youtubeId} opts={videoOptions} onEnd={this.replay} onReady={this.play} onPlay={this.handlePlaying}/>
+          <YouTube videoId={this.state.youtubeId} opts={videoOptions} onEnd={() => this.getNext()} onReady={this.play} onPlay={this.handlePlaying}/>
         </VideoFg>
       </VideoBg>
      );
