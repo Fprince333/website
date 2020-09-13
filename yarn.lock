@@ -10043,10 +10043,10 @@ react-scripts@3.4.3:
   optionalDependencies:
     fsevents "2.1.2"
 
-react-scroll-section@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-scroll-section/-/react-scroll-section-2.0.0.tgz#46138df0b8e6f634589fb86e8eef71b57bac318b"
-  integrity sha512-rr2mlItRg0dyVHnFeA5emwfAx5J0ij3iKuMdeqOx1VXJswRR6H7Fp8FVD4bC0piDwekwJpPEGHY304H4RFKZ6Q==
+react-scroll-section@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-section/-/react-scroll-section-2.1.0.tgz#eccab09ead381d1e52551397efadfc83216c1644"
+  integrity sha512-Fj3rOEWtI6FdDGSJPmSgg5dEQdtVYHBk1mwikrMAoBySF2XfQ4RsvNFTAYZnph3U2kLqL4HMB1d1RTJGfZmU2w==
   dependencies:
     debounce "^1.2.0"
     prop-types "^15.6.2"
