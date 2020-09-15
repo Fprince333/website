@@ -1,11 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import { ScrollingProvider, Section, SectionLink } from "react-scroll-section";
 import { MdExpandMore } from "react-icons/md";
-import { ImYoutube } from "react-icons/im";
 import youtube from '../apis/youtube';
 import Top from './Top';
 import VideoBackground from './VideoBackground';
+import Title from './Title';
 import Navbar from './Navbar';
 import Link from './Link';
 import Profile from './Profile';
@@ -36,20 +35,6 @@ const fetchYouTubeVideoTitle = async (videoId) => {
   return response.data.items[0].snippet.title;
 }
 
-const Title = styled.span`
-  display: flex;
-  align-items: center;
-  text-transform: capitalize;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  svg {
-    fill: #FF0000;
-    margin-right: 10px;
-  }
-`
-
 class Video extends React.Component {
 
   nextVideo = () => {
@@ -57,13 +42,27 @@ class Video extends React.Component {
       return id !== this.state.ytId;
     });
     if (updatedYoutubeIds.length) {
+      const updatedYouTubeId = updatedYoutubeIds[Math.floor(Math.random() * updatedYoutubeIds.length)];
       this.setState({
-        ytId: updatedYoutubeIds[Math.floor(Math.random() * updatedYoutubeIds.length)]
-      });
+        ytId: updatedYouTubeId
+      })
+      fetchYouTubeVideoTitle(updatedYouTubeId).then(title => {
+        this.setState({
+          ytId: updatedYouTubeId,
+          ytTitle: title
+        })
+      })
     } else {
+      const updatedYouTubeId = allYouTubeIds[Math.floor(Math.random() * allYouTubeIds.length)];
       this.setState({
-        ytId: allYouTubeIds[Math.floor(Math.random() * allYouTubeIds.length)]
-      });
+        ytId: updatedYouTubeId
+      })
+      fetchYouTubeVideoTitle(updatedYouTubeId).then(title => {
+        this.setState({
+          ytId: updatedYouTubeId,
+          ytTitle: title
+        })
+      })
     }
   }
 
@@ -83,11 +82,11 @@ class Video extends React.Component {
   render() { 
     return ( 
       <ScrollingProvider scrollBehavior="smooth">
-        <Top title={this.state.ytTitle} ytId={this.state.ytId} />
+        <Top/>
         <SectionLink section="profile">
           {({ onClick, isSelected }) => <Link className="home" onClick={onClick} selected={isSelected}><MdExpandMore /></Link>}
         </SectionLink>
-        {this.state.ytTitle ? <a href={`https://www.youtube.com/watch?v=${this.state.ytId}`} target="_blank" rel="noopener noreferrer"><Title><ImYoutube /> {this.state.ytTitle.replace('HD', '')} </Title></a> : null}
+        <Title ytId={this.state.ytId} ytTitle={this.state.ytTitle}/>
         <VideoBackground ytId={this.state.ytId} getNextVideo={() => this.nextVideo()}/>
         <Navbar />
         <Section id="profile">
