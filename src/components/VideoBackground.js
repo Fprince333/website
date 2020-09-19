@@ -71,7 +71,8 @@ class VideoBackground extends React.Component {
     this.setState({ isPlaying: false })
     this.props.getNextVideo()
     this.setState({
-      youtubeId: this.props.ytId
+      youtubeId: this.props.ytId, 
+      isPlaying: true
     })
   }
 
@@ -79,7 +80,7 @@ class VideoBackground extends React.Component {
     return (
       <VideoBg isPlaying={this.state.isPlaying}>
         <VideoFg>
-          <YouTube videoId={this.state.youtubeId} opts={videoOptions} onEnd={() => this.getNext()} onReady={this.play} onPlay={this.handlePlaying}/>
+          <YouTube videoId={this.props.ytId} opts={videoOptions} onEnd={() => this.getNext()} onReady={this.play} onPlay={this.handlePlaying}/>
         </VideoFg>
       </VideoBg>
      );
