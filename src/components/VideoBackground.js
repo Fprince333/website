@@ -20,6 +20,7 @@ const VideoBg = styled.div`
     height: 100%;
     z-index: 1;
     background: ${props => (props.isPlaying ? 'rgba(0,0,0,.75)' : 'rgba(0,0,0,1)')};
+    background-color: ${props => (props.isPlayingWithSound ? 'rgba(0,0,0,0)' : 'rgba(0,0,0,.75)')};
   }
 `
 
@@ -32,26 +33,25 @@ const VideoFg = styled.div`
   pointer-events: none;
 `
 
-const videoOptions = {
-  playerVars: { // https://developers.google.com/youtube/player_parameters
-    autoplay: 1,
-    mute: 1,
-    cc_load_policy: 1,
-    cc_lang_pref: 'en',
-    controls: 0,
-    rel: 0,
-    showinfo: 0
-  }
-};
-
 class VideoBackground extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      youtubeId: props.ytId,
-      isPlaying: false
-    }
+  
+  state = {
+    youtubeId: this.props.ytId,
+    videoOptions: {
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 1,
+        mute: 1,
+        modestbranding: 1,
+        cc_load_policy: 0,
+        cc_lang_pref: 'en',
+        controls: 0
+      }
+    },
+    isPlayingWithSound: this.props.playWithSound,
+    isPlaying: false
   }
+
+  videoRef = React.createRef();
 
   play = event => {
     event.target.playVideo()
@@ -76,11 +76,39 @@ class VideoBackground extends React.Component {
     })
   }
 
+  mute = () => {
+    document.body.style.overflow = 'initial';
+    this.videoRef.current.getInternalPlayer().mute()
+  }
+
+  unMute = () => {
+    document.body.style.overflow = 'hidden';
+    window.scrollTo(0,0);
+    this.videoRef.current.getInternalPlayer().unMute()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.playWithSound !== prevProps.playWithSound) {
+      !this.props.playWithSound && this.mute();
+      this.props.playWithSound && this.unMute();
+    }
+  }
+
   render() {
     return (
-      <VideoBg isPlaying={this.state.isPlaying}>
+      <VideoBg 
+        isPlaying={this.state.isPlaying} 
+        isPlayingWithSound={this.props.playWithSound}
+        >
         <VideoFg>
-          <YouTube videoId={this.props.ytId} opts={videoOptions} onEnd={() => this.getNext()} onReady={this.play} onPlay={this.handlePlaying}/>
+          <YouTube 
+            videoId={this.props.ytId} 
+            opts={this.state.videoOptions} 
+            onEnd={() => this.getNext()} 
+            onReady={this.play} 
+            onPlay={this.handlePlaying}
+            ref={this.videoRef} 
+            /> 
         </VideoFg>
       </VideoBg>
      );

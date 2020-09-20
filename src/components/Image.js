@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollingProvider, Section, SectionLink } from "react-scroll-section";
 import { MdExpandMore } from "react-icons/md";
 import ImageBackground from './ImageBackground';
-import Top from './Top';
+import Headline from './Headline';
 import Navbar from './Navbar';
 import Link from './Link';
 import Profile from './Profile';
@@ -16,7 +16,7 @@ const Image = () => {
   return (
     <ScrollingProvider scrollBehavior="smooth">
       <ImageBackground>
-        <Top />
+        <Headline />
         <SectionLink section="profile">
           {({ onClick, isSelected }) => <Link className="home" onClick={onClick} selected={isSelected}><MdExpandMore /></Link>}
         </SectionLink>

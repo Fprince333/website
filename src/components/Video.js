@@ -2,9 +2,9 @@ import React from 'react';
 import { ScrollingProvider, Section, SectionLink } from "react-scroll-section";
 import { MdExpandMore } from "react-icons/md";
 import youtube from '../apis/youtube';
-import Top from './Top';
+import Headline from './Headline';
 import VideoBackground from './VideoBackground';
-import Title from './Title';
+import VideoTitle from './VideoTitle';
 import Navbar from './Navbar';
 import Link from './Link';
 import Profile from './Profile';
@@ -37,6 +37,12 @@ const fetchYouTubeVideoTitle = async (videoId) => {
 
 class Video extends React.Component {
 
+  state = { 
+    ytId: firstYouTubeId,
+    ytTitle: '',
+    playFull: false
+  }
+
   nextVideo = () => {
     const updatedYoutubeIds = allYouTubeIds.filter(id => {
       return id !== this.state.ytId;
@@ -66,9 +72,10 @@ class Video extends React.Component {
     }
   }
 
-  state = { 
-    ytId: firstYouTubeId,
-    ytTitle: ''
+  toggleVideoPlayer = () => {
+    this.setState({
+      playFull: !this.state.playFull
+    })
   }
 
   componentDidMount() {
@@ -82,12 +89,24 @@ class Video extends React.Component {
   render() { 
     return ( 
       <ScrollingProvider scrollBehavior="smooth">
-        <Top/>
-        <SectionLink section="profile">
-          {({ onClick, isSelected }) => <Link className="home" onClick={onClick} selected={isSelected}><MdExpandMore /></Link>}
-        </SectionLink>
-        <Title ytId={this.state.ytId} ytTitle={this.state.ytTitle}/>
-        <VideoBackground ytId={this.state.ytId} getNextVideo={() => this.nextVideo()}/>
+        <Headline show={!this.state.playFull}/>
+        <div style={{display: `${this.state.playFull ? 'none' : 'block'}`}}>
+          <SectionLink section="profile">
+            {({ onClick, isSelected }) => <Link className="home" onClick={onClick} selected={isSelected}><MdExpandMore /></Link>}
+          </SectionLink>
+        </div>
+        <VideoTitle 
+          ytId={this.state.ytId} 
+          ytTitle={this.state.ytTitle} 
+          playWithSound={this.state.playFull}
+          togglePlay={() => this.toggleVideoPlayer()}
+          playNext={() => this.nextVideo()}
+          />
+        <VideoBackground 
+          ytId={this.state.ytId} 
+          playWithSound={this.state.playFull}
+          getNextVideo={() => this.nextVideo()}
+          />
         <Navbar />
         <Section id="profile">
           <Profile />
