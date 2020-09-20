@@ -1,41 +1,26 @@
 import React from 'react';
-import { GlobalStyle } from './theme/globalStyle';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import ReactGA from 'react-ga';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Experience from './pages/Experience';
-import Abilities from './pages/Abilities';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import logo from './logo.svg';
+import './App.css';
 
-ReactGA.initialize('UA-58068154-1');
-ReactGA.pageview("/");
-ReactGA.pageview("/profile");
-ReactGA.pageview("/experience");
-ReactGA.pageview("/abilities");
-ReactGA.pageview("/projects");
-ReactGA.pageview("/contact");
-
-class App extends React.Component {
-
-  render() {
-
-    return (
-      <Router>
-        <React.Fragment>
-          <GlobalStyle />
-          <Route path="/" exact component={Home} />
-          <Route path="/index.html" component={Home} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/abilities" component={Abilities} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-        </React.Fragment>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
