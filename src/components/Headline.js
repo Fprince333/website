@@ -15,6 +15,7 @@ const Container = styled.div`
   @media (max-width: 767px) {
     position: absolute;
     top: 0;
+    opacity: 1;
   }
 `
 
