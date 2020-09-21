@@ -76,7 +76,7 @@ function Experience (props) {
     ...etc
   } = props;
   const cls = cx(classes.root, className);
-  const icon = type.includes("Developer") ? 'code-brackets' : 'book';
+  const icon = type.includes("Dev") ? 'code-brackets' : 'book';
 
   return (
     <ArwesExperienceImproved
