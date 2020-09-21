@@ -8,7 +8,7 @@ module.exports.titles = {
   '/': baseTitle,
 };
 
-module.exports.googleAnalytics = 'UA-50433259-1';
+module.exports.googleAnalytics = 'UA-580681154-1';
 
 module.exports.experience = experience;
 module.exports.projects = projects;
