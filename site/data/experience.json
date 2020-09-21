@@ -1,0 +1,46 @@
+[
+  {
+    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e6",
+    "name": "Weber Shandwick",
+    "description": "Developed the USOC Olympians Made Here website. Managed Mars Inc. during the overhaul of the global and local websites. Updated the Weber Shandwick website with new messaging, design and creative.",
+    "date": "2019-Present",
+    "type": "Senior Technical Producer",
+    "scale": 3,
+    "at": "New York, NY",
+    "link": "https://www.webershandwick.com/",
+    "image": "/static/img/experience/weber.jpg"
+  },
+  {
+    "id": "39e466b4-1746-487f-88ca-0879f2a00673",
+    "name": "ASI | Architectural Systems, Inc.",
+    "description": "Created a membership promotional website for VIP clients, offering exclusive content and discount pricing on products. Managed the rebuild of the legacy e-commerce website using Wordpress, React, Node and GraphQL.",
+    "date": "2017-2019",
+    "type": "Web Developer & Marketing Producer",
+    "scale": 1,
+    "at": "New York, NY",
+    "link": "https://www.archsystems.com",
+    "image": "/static/img/experience/archsystems.jpg"
+  },
+  {
+    "id": "02ae590e-9b3e-4b24-b89b-d1ce05757347",
+    "name": "Crossfield Digital & FanVision Entertainment",
+    "description": "Digital agency client experience working on a variety of projects within Crossfield, building and project managing the construction of corporate sites and IoT experiences for Nascar, US Open, and International Champions Cup properties.",
+    "date": "2015-2017",
+    "type": "Web Developer",
+    "scale": 2,
+    "at": "New York, NY",
+    "link": "https://rseventures.com/",
+    "image": "/static/img/experience/crossfield-fanvision.jpg"
+  },
+  {
+    "id": "ff11dd56-c5e0-4d40-bda1-446243591e17",
+    "name": "PrePlay, Inc.",
+    "description": "In partnership with MLB Advanced Media, successfully launched the PrePlay 2nd screen social gaming app that allowed fans to predict every play of every game. The startup was acquired in late September, 2014 by FanVision.",
+    "date": "2012-2015",
+    "type": "Producer & Web Developer",
+    "scale": 3,
+    "at": "New York, NY",
+    "link": "https://www.sportsbusinessdaily.com/Journal/Issues/2014/09/15/Media/FanVision.aspx",
+    "image": "/static/img/experience/preplay.jpg"
+  }
+]

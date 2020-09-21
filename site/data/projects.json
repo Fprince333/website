@@ -1,0 +1,79 @@
+[
+  {
+    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e6",
+    "name": "Mars, Inc.",
+    "description": "Corporate Website Homepage & Design System Refresh",
+    "date": "2020-03-15",
+    "type": "team",
+    "scale": 3,
+    "at": "www.mars.com",
+    "link": "https://www.mars.com",
+    "image": "/static/img/projects/mars.jpg"
+  },
+  {
+    "id": "39e466b4-1746-487f-88ca-0879f2a00673",
+    "name": "Media Genius: Master Class | Fellows Edition",
+    "description": "Enhancement to Weber Shandwick's Solve for X Website",
+    "date": "2020-06-10",
+    "type": "code",
+    "scale": 1,
+    "at": "solveforx.webershandwick.com",
+    "link": "https://solveforx.webershandwick.com/masterclass",
+    "image": "/static/img/projects/solveforx.jpg"
+  },
+  {
+    "id": "02ae590e-9b3e-4b24-b89b-d1ce05757347",
+    "name": "Weber Shandwick",
+    "description": "Updates to the Weber Shandwick Corporate Website with New Messaging, Design and Development.",
+    "date": "2019-06-01",
+    "type": "code",
+    "scale": 2,
+    "at": "www.webershandwick.com",
+    "link": "https://www.webershandwick.com/",
+    "image": "/static/img/projects/ws.jpg" 
+  },
+  {
+    "id": "ff11dd56-c5e0-4d40-bda1-446243591e17",
+    "name": "Architectural Systems, Inc.",
+    "description": "Legacy E-commerce Website Rebrand and Rebuild",
+    "date": "2019-04-01",
+    "type": "team",
+    "scale": 3,
+    "at": "archsystems.com",
+    "link": "https://archsystems.com/",
+    "image": "/static/img/projects/archsystems.jpg"
+  },
+  {
+    "id": "320337f9-1621-4826-91d0-45d29ec879ce",
+    "name": "Randall Smith | Freelance Journalist & Investing Reporter",
+    "description": "Freelance Journalist Professional Website",
+    "date": "2020-01-25",
+    "type": "solo",
+    "scale": 2,
+    "at": "lrandallsmith.com",
+    "link": "https://lrandallsmith.com",
+    "image": "/static/img/projects/dad.jpg"
+  },
+  {
+    "id": "bf1348ea-b960-49ef-aa46-4196b1ada0c8",
+    "name": "Illinois State Board of Investment",
+    "description": "Government Website Design & Development",
+    "date": "2017-10-23",
+    "type": "code",
+    "scale": 3,
+    "at": "www.isbinvestment.com",
+    "link": "https://www.isbinvestment.com",
+    "image": "/static/img/projects/isbi.jpg"
+  },
+  {
+    "id": "57d0f169-433c-494d-899d-40a94ccca3df",
+    "name": "Marc Levine on Investing",
+    "description": "Personal Website for Public Figure",
+    "date": "2018-04-15",
+    "type": "code",
+    "scale": 2,
+    "at": "www.levineratio.com",
+    "link": "https://www.levineratio.com/",
+    "image": "/static/img/projects/marclevine.jpg"
+  }
+]
