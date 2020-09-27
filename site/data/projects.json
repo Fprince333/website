@@ -55,6 +55,17 @@
     "image": "/static/img/projects/dad.jpg"
   },
   {
+    "id": "320337f9-1621-4826-91d0-45d29ec555kl",
+    "name": "Finsh @ Six",
+    "description": "Membership Databsase Service",
+    "date": "2018-03-15",
+    "type": "code",
+    "scale": 2,
+    "at": "www.finishatsix.com",
+    "link": "https://www.finishatsix.com/",
+    "image": "/static/img/projects/finishatsix.jpg"
+  },
+  {
     "id": "bf1348ea-b960-49ef-aa46-4196b1ada0c8",
     "name": "Illinois State Board of Investment",
     "description": "Government Website Design & Development",
