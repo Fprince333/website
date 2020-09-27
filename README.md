@@ -1,4 +1,6 @@
-This is my personal website [www.lwilsonsmith.com](https://www.lwilsonsmith.com/) built with [Arwes](https://arwes.dev/)
+This is my personal website [www.lwilsonsmith.com](https://www.lwilsonsmith.com/) built with [Arwes](https://arwes.dev/) and deployed on [Netlify](https://www.netlify.com/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7e8cd3b9-c8a9-4dac-9922-dc7b0545de81/deploy-status)](https://app.netlify.com/sites/will-smith-web-developer/deploys)
 
 ## Getting Started
 
