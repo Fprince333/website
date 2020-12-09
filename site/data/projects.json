@@ -1,5 +1,16 @@
 [
   {
+    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e7",
+    "name": "Cheez-It® Bowl",
+    "description": "Fan Avatar Creator Experience",
+    "date": "2020-12-09",
+    "type": "code",
+    "scale": 3,
+    "at": "www.cheezit.com",
+    "link": "https://www.cheezit.com/en_US/cheezitbowl.html",
+    "image": "/static/img/projects/cheezit.jpg"
+  },
+  {
     "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e6",
     "name": "Mars, Inc.",
     "description": "Corporate Website Homepage & Design System Refresh",
