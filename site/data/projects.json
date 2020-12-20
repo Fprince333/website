@@ -33,17 +33,6 @@
     "image": "/static/img/projects/mars.jpg"
   },
   {
-    "id": "39e466b4-1746-487f-88ca-0879f2a00673",
-    "name": "Media Genius: Master Class | Fellows Edition",
-    "description": "Enhancement to Weber Shandwick's Solve for X Website",
-    "date": "2020-06-10",
-    "type": "code",
-    "scale": 1,
-    "at": "solveforx.webershandwick.com",
-    "link": "https://solveforx.webershandwick.com/masterclass",
-    "image": "/static/img/projects/solveforx.jpg"
-  },
-  {
     "id": "02ae590e-9b3e-4b24-b89b-d1ce05757347",
     "name": "Weber Shandwick",
     "description": "Updates to the Weber Shandwick Corporate Website with New Messaging, Design and Development.",
