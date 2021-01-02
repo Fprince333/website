@@ -15,26 +15,21 @@ const styles = theme => ({
     padding: [theme.padding, 0],
   },
   content: {},
-  left: {
+  center: {
     marginBottom: theme.margin / 2,
   },
-  right: {},
   // medium +
   [`@media screen and (min-width: ${theme.responsive.small + 1}px)`]: {
     root: {
-      textAlign: 'left',
+      textAlign: 'center',
     },
     content: {
       display: 'flex',
     },
-    left: {
-      margin: 0,
+    center: {
+      margin: '0 auto',
       flex: '1 1 auto',
-    },
-    right: {
-      flex: '1 1 auto',
-      textAlign: 'right',
-    },
+    }
   }
 });
 
@@ -54,14 +49,9 @@ const Footer = props => {
       <Wrap className={classes.wrap}>
         <Row noMargin col s={12}>
           <div className={classes.content}>
-            <div className={classes.left}>
+            <div className={classes.center}>
               <Link href='https://github.com/romelperez/romelperez.com/blob/master/LICENSE' target='license' onLink={onLink}>
-                <TextIcon show={anim.entered} icon='copyright'>2020 Will Smith</TextIcon>
-              </Link>
-            </div>
-            <div className={classes.right}>
-              <Link href='https://arwes.dev' target='arwes' onLink={onLink}>
-                <TextIcon show={anim.entered} icon='chemical-weapon'>Made with Arwes</TextIcon>
+                <TextIcon show={anim.entered} icon='copyright'>2021 Will Smith</TextIcon>
               </Link>
             </div>
           </div>
