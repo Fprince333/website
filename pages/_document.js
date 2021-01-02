@@ -1,6 +1,6 @@
 import React from 'react';
 import { JssProvider, SheetsRegistry } from 'react-jss';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 import { getTitle } from '../site/utils';
 
@@ -31,26 +31,26 @@ export default class AppDocument extends Document {
     const title = getTitle(this.props.pathname);
 
     return (
-      <html lang='en'>
+      <Html lang='en'>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
           <title>{title}</title>
 
-          <meta name='description' content="Web Developer & Creative Technologist" />
+          <meta name='description' content="Seasoned web & marketing professional with experience translating company and client needs into functional, interactive applications." />
           <meta name='keywords' content='will smith web developer, programmer, producer' />
           <meta name='robots' content='index, follow' />
 
           <meta property='og:title' content={title} />
           <meta property='og:site_name' content={title} />
-          <meta property='og:description' content="Web Developer & Creative Technologist" />
+          <meta property='og:description' content="Seasoned web & marketing professional with experience translating company and client needs into functional, interactive applications." />
           <meta property='og:type' content='website' />
           <meta property='og:url' content='https://www.lwilsonsmith.com' />
           <meta property='og:image' content='https://www.lwilsonsmith.com/static/img/willsmith.jpg' />
 
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:title' content={title} />
-          <meta name='twitter:description' content="Web Developer & Creative Technologist" />
+          <meta name='twitter:description' content="Seasoned web & marketing professional with experience translating company and client needs into functional, interactive applications." />
           <meta name='twitter:site' content='@lwilsonsmith' />
           <meta name='twitter:creator' content='@lwilsonsmith' />
           <meta name='twitter:image' content='https://www.lwilsonsmith.com/static/img/willsmith.jpg' />
@@ -86,7 +86,7 @@ export default class AppDocument extends Document {
           <NextScript />
           <link rel='stylesheet' href='//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css' />
         </body>
-      </html>
+      </Html>
     );
   }
 }
