@@ -82,7 +82,7 @@ const styles = theme => ({
 
 class Index extends React.Component {
 
-  constructor () {
+  constructor() {
     super(...arguments);
     this.state = {
       show: false,
@@ -97,11 +97,11 @@ class Index extends React.Component {
     });
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.startLoading();
   }
 
-  render () {
+  render() {
     const { show, loaded } = this.state;
 
     const { classes, resources } = this.props;
@@ -125,81 +125,81 @@ class Index extends React.Component {
           pattern={pattern}
         >
           {anim => (
-          <Content className={classes.root}>
+            <Content className={classes.root}>
 
-            <div className={classes.content}>
+              <div className={classes.content}>
 
-              <div className={classes.section}>
-                <Image
-                  className={classes.profile}
-                  animate
-                  show={anim.entered}
-                  resources={this.profile}
-                />
+                <div className={classes.section}>
+                  <Image
+                    className={classes.profile}
+                    animate
+                    show={anim.entered}
+                    resources={this.profile}
+                  />
+                </div>
+
+                <div className={classes.section}>
+                  <h1><Words animate show={anim.entered}>
+                    Will Smith
+                  </Words></h1>
+                </div>
+
+                <div className={classes.section}>
+                  <p><Words animate show={anim.entered}>
+                    Seasoned web & marketing software engineer with experience translating company and client needs into functional, interactive applications.
+                  </Words></p>
+                </div>
+
+                <div className={classes.section}>
+                  <Link className={classes.detail} href='https://www.linkedin.com/in/lwilsonsmith' target='linkedin' onLink={this.onLink}>
+                    <TextIcon className={classes.textIcon} show={anim.entered} icon='book'>Sr. Software Engineer</TextIcon>
+                  </Link>
+                  <Link className={classes.detail} href='https://www.webershandwick.com/' target='_blank' onLink={this.onLink}>
+                    <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Weber Shandwick | Resolute Digital</TextIcon>
+                  </Link>
+                  <Link className={classes.detail} href='https://www.google.com.co/maps/place/NYC' target='_blank' onLink={this.onLink}>
+                    <TextIcon className={classes.textIcon} show={anim.entered} icon='map-marker-outline'>NYC</TextIcon>
+                  </Link>
+                </div>
+
+                <div className={classes.section}>
+                  <Link className={classes.detail} href='/experience' onLink={this.onLink}>
+                    <Button className={classes.button} animate show={anim.entered}>
+                      {anim2 => <Words animate show={anim2.entered}>Experience</Words>}
+                    </Button>
+                  </Link>
+                  <Link className={classes.detail} href='/projects' onLink={this.onLink}>
+                    <Button className={classes.button} animate show={anim.entered}>
+                      {anim2 => <Words animate show={anim2.entered}>Projects</Words>}
+                    </Button>
+                  </Link>
+                  <Link className={classes.detail} href='https://www.linkedin.com/in/lwilsonsmith' target='linkedin' onLink={this.onLink}>
+                    <Button className={classes.button} animate show={anim.entered}>
+                      {anim2 => <Words animate show={anim2.entered}>LinkedIn</Words>}
+                    </Button>
+                  </Link>
+                  <Link className={classes.detail} href='mailto:lwilsonsmith@gmail.com' target='email' onLink={this.onLink}>
+                    <Button className={classes.button} animate show={anim.entered}>
+                      {anim2 => <Words animate show={anim2.entered}>Email</Words>}
+                    </Button>
+                  </Link>
+                </div>
+
               </div>
 
-              <div className={classes.section}>
-                <h1><Words animate show={anim.entered}>
-                  Will Smith
-                </Words></h1>
-              </div>
-
-              <div className={classes.section}>
-                <p><Words animate show={anim.entered}>
-                  Seasoned web & marketing professional with experience translating company and client needs into functional, interactive applications.
-                </Words></p>
-              </div>
-
-              <div className={classes.section}>
-                <Link className={classes.detail} href='https://www.linkedin.com/in/lwilsonsmith' target='linkedin' onLink={this.onLink}>
-                  <TextIcon className={classes.textIcon} show={anim.entered} icon='book'>Sr. Technical Producer</TextIcon>
-                </Link>
-                <Link className={classes.detail} href='https://www.webershandwick.com/' target='_blank' onLink={this.onLink}>
-                  <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Weber Shandwick</TextIcon>
-                </Link>
-                <Link className={classes.detail} href='https://www.google.com.co/maps/place/NYC' target='_blank' onLink={this.onLink}>
-                  <TextIcon className={classes.textIcon} show={anim.entered} icon='map-marker-outline'>NYC</TextIcon>
-                </Link>
-              </div>
-
-              <div className={classes.section}>
-                <Link className={classes.detail} href='/experience' onLink={this.onLink}>
-                  <Button className={classes.button} animate show={anim.entered}>
-                    {anim2 => <Words animate show={anim2.entered}>Experience</Words>}
-                  </Button>
-                </Link>
-                <Link className={classes.detail} href='/projects' onLink={this.onLink}>
-                  <Button className={classes.button} animate show={anim.entered}>
-                    {anim2 => <Words animate show={anim2.entered}>Projects</Words>}
-                  </Button>
-                </Link>
-                <Link className={classes.detail} href='https://www.linkedin.com/in/lwilsonsmith' target='linkedin' onLink={this.onLink}>
-                  <Button className={classes.button} animate show={anim.entered}>
-                    {anim2 => <Words animate show={anim2.entered}>LinkedIn</Words>}
-                  </Button>
-                </Link>
-                <Link className={classes.detail} href='mailto:lwilsonsmith@gmail.com' target='email' onLink={this.onLink}>
-                  <Button className={classes.button} animate show={anim.entered}>
-                    {anim2 => <Words animate show={anim2.entered}>Email</Words>}
-                  </Button>
-                </Link>
-              </div>
-
-            </div>
-
-          </Content>
+            </Content>
           )}
         </Arwes>
       </div>
     );
   }
 
-  startLoading () {
+  startLoading() {
     const responsive = this.responsive.get();
     const background = utils.getResponsiveResource(this.props.resources.background, responsive);
 
     this.loader.load({ images: [background, this.profile] }, { timeout: 5 * 1000 }).
-      then(() => {}, () => {}).
+      then(() => { }, () => { }).
       then(() => this.setState({ show: true, loaded: true }));
   }
 
