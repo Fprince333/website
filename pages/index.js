@@ -146,7 +146,7 @@ class Index extends React.Component {
 
                 <div className={classes.section}>
                   <p><Words animate show={anim.entered}>
-                    Seasoned web & marketing software engineer with experience translating company and client needs into functional, interactive applications.
+                    Seasoned software engineer with experience translating company and client needs into functional, interactive applications.
                   </Words></p>
                 </div>
 
