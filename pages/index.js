@@ -178,9 +178,9 @@ class Index extends React.Component {
                       {anim2 => <Words animate show={anim2.entered}>LinkedIn</Words>}
                     </Button>
                   </Link>
-                  <Link className={classes.detail} href='mailto:lwilsonsmith@gmail.com' target='email' onLink={this.onLink}>
+                  <Link className={classes.detail} href='https://github.com/Fprince333' target='github' onLink={this.onLink}>
                     <Button className={classes.button} animate show={anim.entered}>
-                      {anim2 => <Words animate show={anim2.entered}>Email</Words>}
+                      {anim2 => <Words animate show={anim2.entered}>GitHub</Words>}
                     </Button>
                   </Link>
                 </div>
