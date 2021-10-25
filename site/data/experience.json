@@ -1,9 +1,20 @@
 [
   {
+    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e7",
+    "name": "Higi",
+    "description": "Web and Mobile application development working on kiosk interface, native mobile applications and other web-based products.",
+    "date": "2021-Present",
+    "type": "Sr. Engineer",
+    "scale": 3,
+    "at": "New York, NY",
+    "link": "https://www.higi.com/",
+    "image": "/static/img/experience/higi.jpg"
+  },
+  {
     "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e6",
     "name": "Weber | Resolute",
-    "description": "Lead developer on the Seafood from Maine website and Cheez-It® Wheel Live Fan Builder interactive web experience. Maintenance and enhancements to proprietary software project Q. Animated banner ad creations, custom WordPress builds, ongoing development of legacy web projects.",
-    "date": "2019-Present",
+    "description": "Lead developer on the Seafood from Maine website and Cheez-It® Wheel Live Fan Builder interactive web experience. Maintenance and enhancements to proprietary software project Q. Animated banner ad creations, custom WordPress builds, recurring development of legacy web projects.",
+    "date": "2019-2021",
     "type": "Sr. Engineer",
     "scale": 3,
     "at": "New York, NY",
