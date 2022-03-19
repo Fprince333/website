@@ -46,17 +46,15 @@ const Footer = props => {
   return (
     <ArwesFooter className={cls} {...etc}>
       {anim => (
-      <Wrap className={classes.wrap}>
-        <Row noMargin col s={12}>
-          <div className={classes.content}>
-            <div className={classes.center}>
-              <Link href='https://github.com/romelperez/romelperez.com/blob/master/LICENSE' target='license' onLink={onLink}>
-                <TextIcon show={anim.entered} icon='copyright'>2021 Will Smith</TextIcon>
-              </Link>
+        <Wrap className={classes.wrap}>
+          <Row noMargin col s={12}>
+            <div className={classes.content}>
+              <div className={classes.center}>
+                <TextIcon show={anim.entered} icon='copyright'>2022 Will Smith</TextIcon>
+              </div>
             </div>
-          </div>
-        </Row>
-      </Wrap>
+          </Row>
+        </Wrap>
       )}
     </ArwesFooter>
   );
