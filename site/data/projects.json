@@ -1,5 +1,16 @@
 [
   {
+    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e1999",
+    "name": "Higi Stations",
+    "description": "Kiosk User Interface for all stations in North America",
+    "date": "2021-10-25",
+    "type": "code",
+    "scale": 3,
+    "at": "secure.higi.com/locator",
+    "link": "https://secure.higi.com/locator",
+    "image": "/static/img/projects/higi.jpg"
+  },
+  {
     "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e1985",
     "name": "Flu Shot Fridays",
     "description": "Flu Shot Campaign Landing Page",
