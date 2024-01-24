@@ -42,7 +42,7 @@ const Footer = props => {
     ...etc
   } = props;
   const cls = cx(classes.root, className);
-
+  const currentYear = new Date().getFullYear();
   return (
     <ArwesFooter className={cls} {...etc}>
       {anim => (
@@ -50,7 +50,7 @@ const Footer = props => {
           <Row noMargin col s={12}>
             <div className={classes.content}>
               <div className={classes.center}>
-                <TextIcon show={anim.entered} icon='copyright'>{new Date().getFullYear()} Will Smith</TextIcon>
+                <TextIcon show={anim.entered} icon='copyright'>{currentYear} Will Smith</TextIcon>
               </div>
             </div>
           </Row>
