@@ -157,7 +157,7 @@ class Index extends React.Component {
                   <Link className={classes.detail} href='https://www.webershandwick.com/' target='_blank' onLink={this.onLink}>
                     <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Higi</TextIcon>
                   </Link>
-                  <Link className={classes.detail} href='https://www.google.com.co/maps/place/NYC' target='_blank' onLink={this.onLink}>
+                  <Link className={classes.detail} href='https://www.google.com.co/maps/place/CT' target='_blank' onLink={this.onLink}>
                     <TextIcon className={classes.textIcon} show={anim.entered} icon='map-marker-outline'>NYC</TextIcon>
                   </Link>
                 </div>
