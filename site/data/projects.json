@@ -11,17 +11,6 @@
     "image": "/static/img/projects/higi.jpg"
   },
   {
-    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e1985",
-    "name": "Flu Shot Fridays",
-    "description": "Flu Shot Campaign Landing Page",
-    "date": "2021-08-01",
-    "type": "code",
-    "scale": 2,
-    "at": "www.flushotfridays.com",
-    "link": "https://www.flushotfridays.com/",
-    "image": "/static/img/projects/flushotfridays.jpg"
-  },
-  {
     "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14b8",
     "name": "Premium Maine Seafood",
     "description": "Official site of Maine's seafood and seafood supplier directory",
@@ -53,17 +42,6 @@
     "at": "chrome web store",
     "link": "https://chrome.google.com/webstore/detail/netflix-repeat-one/nakdfnainfphcljekajcdbpdefmccccp",
     "image": "/static/img/projects/netflix.jpg"
-  },
-  {
-    "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e1",
-    "name": "Comparing the Curve",
-    "description": "Covid Infection Data Vizualization",
-    "date": "2020-06-15",
-    "type": "team",
-    "scale": 1,
-    "at": "covid-data-vis.azurewebsites.net",
-    "link": "https://covid-data-vis.azurewebsites.net",
-    "image": "/static/img/projects/covid.jpg"
   },
   {
     "id": "a7fd5e95-ea29-41a5-ab29-6b71a47e14e6",
