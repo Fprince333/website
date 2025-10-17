@@ -1,4 +1,3 @@
 [build]
   command   = "corepack enable && yarn build"
-  functions = "out_functions"
-  publish   = "out_publish"
+  publish   = "out"
