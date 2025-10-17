@@ -84,7 +84,11 @@ class Experiences extends React.Component {
 
     const list = experience.
       filter(item => !item.private).
-      sort((a, b) => moment(b.date).format('x') - moment(a.date).format('x'));
+      sort((a, b) => {
+        const dateA = a.date.split('-')[0];
+        const dateB = b.date.split('-')[0];
+        return moment(dateB).format('x') - moment(dateA).format('x');
+      });
 
     return (
       <Arwes
