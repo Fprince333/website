@@ -49,7 +49,7 @@ const Footer = props => {
           <Row noMargin col s={12}>
             <div className={classes.content}>
               <div className={classes.center}>
-                <TextIcon show={anim.entered} icon='copyright'>2024 Will Smith</TextIcon>
+                <TextIcon show={anim.entered} icon='copyright'>2025 Will Smith</TextIcon>
               </div>
             </div>
           </Row>
